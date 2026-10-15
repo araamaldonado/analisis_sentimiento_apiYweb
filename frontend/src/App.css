@@ -1,0 +1,623 @@
+/* ========== Tipografías (Fredoka para títulos, Nunito para texto) ========== */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;600;700&display=swap');
+
+/* ========== Reset y variables ========== */
+:root {
+  /* Paleta tomada del logo */
+  --color-bg: #f4c6e1;          /* fondo exterior (rosa un poco más intenso) */
+  --color-page: #fdd9f0;        /* rosa del logo: se funde con la imagen */
+  --color-surface: #fff7ee;     /* crema de las letras */
+  --color-text: #5b3a2c;        /* marrón del contorno */
+  --color-muted: #8a6657;
+  --color-primary: #f27ca8;     /* rosa de las orejitas */
+  --color-primary-dark: #e2598d;
+  --color-accent: #c2477a;      /* links */
+  --color-border: #5b3a2c;      /* contorno marrón estilo "sticker" */
+  --color-border-soft: #e8c3b2;
+  --color-input: #ffffff;       /* fondo de textarea y bloques de código */
+  --color-on-primary: #5b3a2c;  /* texto sobre el rosa de los botones */
+  --color-error: #9b1c3c;
+  --color-placeholder: #b99a8c;
+  --color-chip: rgba(255, 255, 255, 0.85);
+  --radius: 18px;
+  --shadow: 4px 4px 0 rgba(91, 58, 44, 0.18);
+  --shadow-btn: 3px 3px 0 rgba(91, 58, 44, 0.35);
+  --shadow-btn-active: 1px 1px 0 rgba(91, 58, 44, 0.35);
+  color-scheme: light;
+  --page-width: 720px;
+  --gutter: clamp(1rem, 4vw, 2rem);
+}
+
+/* ========== Modo nocturno (se activa con data-tema="oscuro" en <html>) ========== */
+:root[data-tema='oscuro'] {
+  color-scheme: dark;
+  --color-bg: #1d141f;
+  --color-page: #2a1c2d;
+  --color-surface: #382639;
+  --color-text: #f6e7da;
+  --color-muted: #c9adb4;
+  --color-primary: #f27ca8;
+  --color-primary-dark: #ff9bbd;
+  --color-accent: #ff9bc2;
+  --color-border: #e4c4b0;
+  --color-border-soft: #5c4259;
+  --color-input: #241826;
+  --color-error: #ff8fa8;
+  --color-placeholder: #8f7590;
+  --color-chip: rgba(36, 24, 38, 0.85);
+  --shadow: 4px 4px 0 rgba(0, 0, 0, 0.35);
+  --shadow-btn: 3px 3px 0 rgba(0, 0, 0, 0.5);
+  --shadow-btn-active: 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  display: block; /* anula el display:flex de la plantilla de Vite */
+  min-width: 320px;
+  font-family: 'Nunito', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+h1, h2, h3,
+.site-nav,
+.btn {
+  font-family: 'Fredoka', 'Nunito', system-ui, sans-serif;
+}
+
+/* La página completa es una columna centrada (como el marco del boceto) */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  background: var(--color-page);
+  box-shadow: 0 0 0 3px var(--color-border);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ========== Header (solo logo) ========== */
+.site-header {
+  display: flex;
+  justify-content: center;
+  padding: clamp(1rem, 4vw, 2.5rem) var(--gutter) 0;
+}
+
+/* El logo se adapta al ancho de la página: nunca menor a 150px ni mayor a 360px */
+.site-header img {
+  display: block;
+  width: clamp(150px, 45vw, 360px);
+  max-width: 100%;
+  height: auto;
+}
+
+/* ========== Main ========== */
+.site-main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 1rem var(--gutter) 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1.5rem;
+}
+
+/* Menú: HOME | INFO */
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.site-nav a,
+.tema-btn {
+  padding: 0.35rem 0.75rem;
+  color: var(--color-text);
+  text-decoration: none;
+  border-radius: 999px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible,
+.tema-btn:hover,
+.tema-btn:focus-visible {
+  background: var(--color-surface);
+  color: var(--color-accent);
+  outline: 2px solid var(--color-border);
+}
+
+/* Página del menú en la que se está parada */
+.site-nav a.active {
+  background: var(--color-surface);
+  color: var(--color-accent);
+  outline: 2px solid var(--color-border);
+}
+
+.site-nav span {
+  color: var(--color-muted);
+}
+
+/* Botón de modo nocturno: se ve igual que los links del menú */
+.tema-btn {
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+/* Intro */
+.intro h2 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
+  line-height: 1.25;
+}
+
+.intro p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+/* Caja principal (card): análisis normal o análisis extendido; también la página Info */
+.analyzer,
+.info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: clamp(1rem, 4vw, 1.75rem);
+  background: var(--color-surface);
+  border: 3px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.analyzer textarea {
+  width: 100%;
+  min-height: 140px;
+  padding: 0.85rem 1rem;
+  font: inherit;
+  color: inherit;
+  background: var(--color-input);
+  border: 2px solid var(--color-border-soft);
+  border-radius: 12px;
+  resize: vertical;
+}
+
+.analyzer textarea::placeholder {
+  color: var(--color-placeholder);
+}
+
+.analyzer textarea:focus {
+  outline: none;
+  border-color: var(--color-border);
+  box-shadow: 0 0 0 3px rgba(242, 124, 168, 0.35);
+}
+
+.btn {
+  padding: 0.65rem 2.25rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-on-primary);
+  background: var(--color-primary);
+  border: 3px solid var(--color-border);
+  border-radius: 999px;
+  box-shadow: var(--shadow-btn);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.1s;
+}
+
+.btn:hover {
+  background: var(--color-primary-dark);
+}
+
+.btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: var(--shadow-btn-active);
+}
+
+.btn:focus-visible {
+  outline: 3px solid rgba(242, 124, 168, 0.55);
+  outline-offset: 3px;
+}
+
+.resultado {
+  width: 100%;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  color: var(--color-muted);
+  background: var(--color-page);
+  border: 2px dashed var(--color-border-soft);
+  border-radius: 12px;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Contador de caracteres (esquina inferior derecha del textarea) ---------- */
+.campo {
+  position: relative;
+  width: 100%;
+}
+
+.campo textarea {
+  display: block;
+  padding-bottom: 2.25rem; /* lugar para el contador */
+}
+
+.contador {
+  position: absolute;
+  right: 1.75rem; /* deja libre la manija para redimensionar */
+  bottom: 0.6rem;
+  padding: 0 0.35rem;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  background: var(--color-chip);
+  border-radius: 6px;
+  pointer-events: none;
+  font-variant-numeric: tabular-nums;
+}
+
+.contador--alerta {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.aviso {
+  width: 100%;
+  margin: -0.25rem 0 0;
+  text-align: left;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+/* ---------- Botones secundarios y fila de acciones ---------- */
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.btn-outline {
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+
+.btn-outline:hover {
+  background: var(--color-page);
+}
+
+.btn-file {
+  display: inline-block;
+  text-align: center;
+}
+
+.file-input:focus-visible + .btn-file {
+  outline: 3px solid rgba(242, 124, 168, 0.55);
+  outline-offset: 3px;
+}
+
+.file-input:disabled + .btn-file {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+/* ---------- Resultados ---------- */
+.veredicto,
+.error {
+  margin: 0;
+}
+
+.error {
+  color: var(--color-error);
+  font-weight: 600;
+}
+
+.cargando-wrap {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.cargando-mensaje {
+  color: var(--color-muted);
+}
+
+.resultado details {
+  margin-top: 0.75rem;
+  text-align: left;
+}
+
+.resultado summary,
+.formato summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.detalle {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+ul.detalle {
+  padding-left: 0;
+  list-style: none;
+}
+
+.detalle li {
+  margin-bottom: 0.6rem;
+}
+
+ul.detalle li {
+  padding-bottom: 0.6rem;
+  border-bottom: 1px dashed var(--color-border-soft);
+}
+
+.resumen {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0.6rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.resumen li {
+  padding: 0.2rem 0.75rem;
+  font-weight: 700;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 999px;
+}
+
+/* ---------- Páginas de texto (Info, 404) ---------- */
+.info-card {
+  align-items: stretch;
+  text-align: left;
+}
+
+.info-card h2 {
+  margin: 0;
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
+  line-height: 1.25;
+}
+
+.info-card h3 {
+  margin: 0.75rem 0 0;
+  font-size: clamp(1.05rem, 3vw, 1.25rem);
+}
+
+.info-card p {
+  margin: 0;
+}
+
+.info-card a {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+/* ---------- Vistas dentro de la card (análisis normal / extendido) ---------- */
+.vista {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.vista h2 {
+  margin: 0;
+  font-size: clamp(1.15rem, 3.5vw, 1.5rem);
+}
+
+.descripcion {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+/* "‹ Regresar a análisis normal" (arriba a la izquierda de la card) */
+.volver {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.5rem 0.25rem 0;
+  font: inherit;
+  font-weight: 700;
+  color: var(--color-accent);
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.volver:hover,
+.volver:focus-visible {
+  text-decoration: underline;
+}
+
+.volver:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+/* Aviso + botón "Análisis extendido" al pie de la vista normal */
+.extender {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding-top: 1rem;
+  border-top: 2px dashed var(--color-border-soft);
+}
+
+.extender p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.formato {
+  width: 100%;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.formato p {
+  margin: 0.5rem 0 0;
+}
+
+.formato pre {
+  margin: 0.5rem 0 0;
+  padding: 0.75rem;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  color: var(--color-text);
+  background: var(--color-input);
+  border: 2px solid var(--color-border-soft);
+  border-radius: 12px;
+}
+
+/* Animación de carga: ● ○ ○  →  ● ● ○  →  ● ● ●  → repite */
+.cargando {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.cargando img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+/* El primero siempre está encendido; el 2.º y el 3.º se van sumando */
+.cargando img:nth-child(2) {
+  animation: carga-paso-2 1.5s linear infinite;
+}
+
+.cargando img:nth-child(3) {
+  animation: carga-paso-3 1.5s linear infinite;
+}
+
+@keyframes carga-paso-2 {
+  0%, 33.32% { opacity: 0.25; transform: scale(0.8); }
+  33.33%, 100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes carga-paso-3 {
+  0%, 66.65% { opacity: 0.25; transform: scale(0.8); }
+  66.66%, 100% { opacity: 1; transform: scale(1); }
+}
+
+/* Si la persona prefiere menos movimiento: se muestran los tres encendidos */
+@media (prefers-reduced-motion: reduce) {
+  .cargando img {
+    animation: none !important;
+  }
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+/* Sección extra */
+.extra h2 {
+  margin: 1.5rem 0 0.5rem;
+  font-size: clamp(1.15rem, 3.5vw, 1.5rem);
+}
+
+.extra h3 {
+  margin: 0;
+  font-size: clamp(1rem, 3vw, 1.15rem);
+  font-weight: 500;
+}
+
+.extra p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.extra a,
+.analyzer a {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+/* ========== Footer ========== */
+.site-footer {
+  padding: 1rem var(--gutter);
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* ========== Responsive ========== */
+
+/* Móviles */
+@media (max-width: 480px) {
+  .site-main {
+    gap: 1.25rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .site-nav {
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablets en adelante */
+@media (min-width: 768px) {
+  :root {
+    --page-width: 760px;
+  }
+
+  .analyzer textarea {
+    min-height: 180px;
+  }
+}

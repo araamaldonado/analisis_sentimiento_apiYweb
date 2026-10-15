@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
-from inference import analizar_sentimiento
+from inference import analizar_sentimientos_lote
 
 app = FastAPI()
 
@@ -12,9 +12,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-class TextoInput(BaseModel):
-    texto: str
+class LoteInput(BaseModel):
+    textos: list[str]
 
-@app.post("/api/sentiment")
-def sentiment_endpoint(datos: TextoInput):
-    return analizar_sentimiento(datos.texto)
+@app.post("/api/sentiment/batch")
+def sentiment_batch_endpoint(datos: LoteInput):
+    resultados = analizar_sentimientos_lote(datos.textos)
+    return {"resultados": resultados}
