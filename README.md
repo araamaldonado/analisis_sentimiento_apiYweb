@@ -5,18 +5,18 @@
 ## 📸 Demostración
 
 <p align="center">
-  <img src="./imgs/home_light.png" width="500" style="display: inline-block; margin: 1%;" alt="Demostración de la app 1">
-  <img src="./imgs/home_dark.png" width="500" style="display: inline-block; margin: 1%;" alt="Demostración de la app 2">
+  <img src="./imgs/home_light.png" width="400" height="400" style="display: inline-block; margin: 1%;" alt="Demostración de la app 1">
+  <img src="./imgs/home_dark.png" width="500" height="400" style="display: inline-block; margin: 1%;" alt="Demostración de la app 2">
 </p>
 
 <p align="center">
-  <img src="./imgs/a_normal_carga.png" width="500" style="display: inline-block; margin: 1%;" alt="Demostración de la app 3">
-  <img src="./imgs/a_normal_res.png" width="500" style="display: inline-block; margin: 1%;" alt="Demostración de la app 4">
+  <img src="./imgs/a_normal_carga.png" width="500" height="400" style="display: inline-block; margin: 1%;" alt="Demostración de la app 3">
+  <img src="./imgs/a_normal_res.png" width="500" height="400" style="display: inline-block; margin: 1%;" alt="Demostración de la app 4">
 </p>
 
 <p align="center">
-  <img src="./imgs/a_extendido.png" width="500" style="display: inline-block; margin: 1%;" alt="Demostración de la app 5">
-  <img src="./imgs/a_ext_res.png" width="500" style="display: inline-block; margin: 1%;" alt="Demostración de la app 6">
+  <img src="./imgs/a_extendido.png" width="500" height="400" style="display: inline-block; margin: 1%;" alt="Demostración de la app 5">
+  <img src="./imgs/a_ext_res.png" width="500" height="400" style="display: inline-block; margin: 1%;" alt="Demostración de la app 6">
 </p>
 
 ## ✨ Características
