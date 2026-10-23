@@ -3,6 +3,24 @@ export const MAX_CHARS = 465 // caracteres por parte (el modelo admite ~128 toke
 export const MAX_PARTES = 20 // partes máximas por texto
 export const MAX_ITEMS = 200 // textos máximos por archivo
 export const MAX_BYTES = 1024 * 1024 // tamaño máximo del archivo (1 MB)
+const MIN_LETRAS = 3
+const MIN_PROPORCION_LETRAS = 0.5
+
+export function validarTexto(texto) {
+  const sinEspacios = texto.replace(/\s+/g, '')
+  const letras = (sinEspacios.match(/\p{L}/gu) ?? []).length
+
+  if (letras < MIN_LETRAS) {
+    return `El texto debe tener al menos ${MIN_LETRAS} letras.`
+  }
+  if (!/\p{L}{2,}/u.test(texto)) {
+    return 'Escriba al menos una palabra completa.'
+  }
+  if (letras / [...sinEspacios].length < MIN_PROPORCION_LETRAS) {
+    return 'El texto tiene demasiados símbolos o números para ser analizado.'
+  }
+  return null
+}
 
 // Claves que se aceptan como "el texto" dentro de cada objeto del JSON
 const CLAVES_TEXTO = ['texto', 'text', 'comentario', 'comment', 'mensaje', 'contenido']

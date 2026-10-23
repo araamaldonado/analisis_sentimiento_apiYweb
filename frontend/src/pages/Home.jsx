@@ -11,6 +11,7 @@ import {
   dividirTexto,
   combinarResultados,
   leerArchivo,
+  validarTexto,
 } from '../utils/texto'
 
 const MENSAJE_ERROR = 'No se pudo analizar el texto. Intente nuevamente.'
@@ -34,11 +35,26 @@ function Home() {
     }
   }, [])
 
+  const handleCancelar = () => {
+    cancelar.current = true;
+    setCargando(null);
+    setProgreso('');
+    setError('Análisis cancelado.');
+    setErrorLote('Análisis cancelado.');
+
+    setTimeout(() => {
+      setError("")
+      setErrorLote("")
+      setResultado(null)
+      setLote(null)
+      }, 3500)
+  };
+
   // Partes en las que se dividiría el texto actual (cada una de hasta MAX_CHARS)
   const partes = useMemo(() => dividirTexto(text), [text])
   const largoParteActual = partes.length ? partes[partes.length - 1].length : 0
 
-  // Analiza un texto: lo divide en partes, analiza cada una y devuelve el resultado general
+  
   const analizarTexto = async (texto) => {
   const partesTexto = dividirTexto(texto)
 
@@ -50,15 +66,17 @@ function Home() {
       `El texto es demasiado largo (máximo ${MAX_PARTES} partes de ${MAX_CHARS} caracteres).`,
     )
   }
+  const mensaje = validarTexto(texto) // la función que te pasé antes
+  if (mensaje) throw new ErrorValidacion(mensaje)
+  if (cancelar.current) throw new ErrorCancelado()
 
-  // ¡Una sola petición POST con todas las partes juntas!
-  const resultadosPartes = await apisentiment_batch_fetch(partesTexto)
+  const respuestas = await apisentiment_batch_fetch(partesTexto)
 
-  const porParte = resultadosPartes.map((r, i) => ({
-    texto: partesTexto[i],
-    etiqueta: r.etiqueta,
-    confianza: r.confianza,
-  }))
+  if (cancelar.current) throw new ErrorCancelado()
+
+  // Una parte sin palabras no tumba el análisis: se descarta si hay otras válidas
+  const porParte = respuestas.filter((r) => !r.error)
+  if (porParte.length === 0) throw new ErrorValidacion(respuestas[0].error)
 
   return { ...combinarResultados(porParte), partes: porParte }
 }
@@ -66,6 +84,8 @@ function Home() {
   // ----- Un solo texto (corto o largo) -----
   const handleSubmit = async (e) => {
     e.preventDefault()
+    if (cargando) return
+
     cancelar.current = false
     setError('')
     setResultado(null)
@@ -94,6 +114,7 @@ function Home() {
 
   // ----- Varios textos desde un archivo (.json o .txt) -----
   const handleArchivo = async (e) => {
+    if (cargando) return
     const archivo = e.target.files?.[0]
     e.target.value = ''
     if (!archivo) return
@@ -124,6 +145,8 @@ function Home() {
       // ¡UNA SOLA PETICIÓN POST PARA TODO EL ARCHIVO ENTERO!
       const resultadosLote = await apisentiment_batch_fetch(listaTextos)
 
+      if (cancelar.current) throw new ErrorCancelado()
+
       // Combinamos cada resultado con su respectivo item original
       const analizados = items.map((item, index) => ({
         ...item,
@@ -152,9 +175,7 @@ function Home() {
     <button
       type="button"
       className="btn btn-outline"
-      onClick={() => {
-        cancelar.current = true
-      }}
+      onClick={handleCancelar}
     >
       Cancelar
     </button>
