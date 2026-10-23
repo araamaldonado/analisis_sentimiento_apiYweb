@@ -1,8 +1,10 @@
 from transformers import pipeline
+import torch
 
 clasificador = pipeline(
     "sentiment-analysis",
-    model="pysentimiento/robertuito-sentiment-analysis"
+    model="pysentimiento/robertuito-sentiment-analysis",
+    device=0 if torch.cuda.is_available() else -1,  # 0 = primera GPU, -1 = CPU
 )
 
 MAPEO_ETIQUETAS = {

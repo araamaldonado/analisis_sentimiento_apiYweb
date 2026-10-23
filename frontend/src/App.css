@@ -129,6 +129,14 @@ h1, h2, h3,
 }
 
 /* Menú: HOME | INFO */
+.theme-text {
+  display: inline;
+}
+
+.theme-icon {
+  display: none;
+}
+
 .site-nav {
   display: flex;
   flex-wrap: wrap;
@@ -606,8 +614,16 @@ ul.detalle li {
     width: 100%;
   }
 
+  .theme-icon {
+  display: inline;
+  }
+
+  .theme-text {
+    display: none;
+  }
+
   .site-nav {
-    font-size: 0.95rem;
+    font-size: 0.875rem;
   }
 }
 

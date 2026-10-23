@@ -44,7 +44,18 @@ function Layout() {
           <NavLink to="/info">Info</NavLink>
           <span aria-hidden="true">|</span>
           <button type="button" className="tema-btn" onClick={alternarTema}>
-            {tema === 'oscuro' ? '☀️ Modo claro' : '🌙 Modo nocturno'}
+            {tema === 'oscuro' 
+            ?
+            <>
+              <span className='theme-icon'>☀️</span> 
+              <span className="theme-text">☀️ Modo claro</span>
+            </> 
+            :
+            <>
+              <span className='theme-icon'>🌙</span>
+              <span className="theme-text">🌙 Modo nocturno</span>
+            </>  
+            }
           </button>
         </nav>
 
