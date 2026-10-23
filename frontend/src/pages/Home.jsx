@@ -267,15 +267,17 @@ function Home() {
             <details className="formato">
               <summary>¿Qué formato debe tener el archivo?</summary>
               <p>
-                <strong>.json</strong>: una lista de textos, o de objetos con un campo{' '}
-                <code>texto</code> (y opcionalmente <code>id</code>).
+                <strong>.json</strong>: un objeto con un array llamado <code>"textos"</code> que contenga los comentarios/textos a analizar. Por ejemplo:
               </p>
               {/* Tuvo que quedar asi para que quede prolijo escrito en la pagina */}
               <pre>
-                {`[
-    { "id": 1, "texto": "Me encantó el producto" },
-    { "id": 2, "texto": "Llegó roto y nadie responde" }       
-]`}
+                {`{
+  "textos": [
+    "Texto 1",
+    "Texto 2",
+    "Texto 3",
+  ]
+}`}
               </pre>
               <p>
                 <strong>.txt</strong>: un texto por línea.
