@@ -365,8 +365,13 @@ h1, h2, h3,
 }
 
 .resultado details {
-  margin-top: 0.75rem;
+  margin: 1.2rem 0.5rem;
   text-align: left;
+}
+
+.button-dl {
+  margin: 0.5rem;
+  padding: 0.4rem 1rem;
 }
 
 .resultado summary,

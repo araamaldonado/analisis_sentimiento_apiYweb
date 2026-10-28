@@ -1,0 +1,90 @@
+[
+    {
+        "review_es": "La película dura dos horas y diez minutos y está ambientada en Madrid en los años ochenta. El protagonista es un periodista que investiga un caso de corrupción.", 
+        "sentimiento": "neutral"
+    },
+    {
+        "review_es": "La vi el sábado en el cine del centro. La sala estaba a la mitad y la proyección empezó a horario.", 
+        "sentimiento": "neutral"
+    },
+    {
+        "review_es": "Tiene algunas escenas interesantes y otras que se hacen largas. En general no me aburrió, pero tampoco me dejó pensando.", 
+        "sentimiento": "neutral"
+    },
+    {
+        "review_es": "Es una adaptación de una novela. Cambia el final respecto del libro, aunque mantiene a casi todos los personajes principales.", 
+        "sentimiento": "neutral"
+    },
+    {
+        "review_es": "Las actuaciones cumplen y la fotografía es correcta. La historia es simple y sigue la estructura de siempre en este tipo de películas.",
+        "sentimiento": "neutral"
+    },
+    {
+        "review_es": "La película está disponible en varias plataformas de streaming. Tiene subtítulos en español y en inglés.", 
+        "sentimiento": "neutral"
+    },
+    {
+        "review_es": "No sé bien qué opinar. Hay partes que me gustaron y otras que no tanto, así que quedo en el medio.", 
+        "sentimiento": "neutral"
+    },
+    {
+        "review_es": "Se estrenó en 2015 y fue dirigida por un director que ya había hecho dos películas parecidas. Participa un elenco de actores conocidos.", 
+        "sentimiento": "neutral"
+    },
+    {
+        "review_es": "La trama sigue a una familia que se muda al campo. Durante la película aparecen conflictos con los vecinos y problemas económicos.", 
+        "sentimiento": "neutral"
+    },
+    {
+        "review_es": "Es una película más del género. Si te gusta el policial la podés ver, y si no, tampoco te perdés nada importante.", 
+        "sentimiento": "neutral"
+    },
+    {
+        "review_es": "La banda sonora acompaña bien, aunque no destaca. Tiene un par de canciones conocidas y el resto es música instrumental de fondo.", 
+        "sentimiento": "neutral"
+    },
+    {
+        "review_es": "La vimos en familia un domingo a la tarde. A mi hermano le pareció regular y a mis papás les dio lo mismo.", 
+        "sentimiento": "neutral"
+    },
+    {
+        "review_es": "El guion tiene buenas ideas, pero el ritmo es irregular. Algunas escenas funcionan y otras no tanto.", 
+        "sentimiento": "neutral"
+    },
+    {
+        "review_es": "Es una producción de bajo presupuesto, filmada casi toda en una sola locación. Los efectos son sencillos y el elenco es reducido.", 
+        "sentimiento": "neutral"
+    },
+    {
+        "review_es": "La película está dividida en tres partes y cada una transcurre en una época diferente. Al final las historias se conectan.", 
+        "sentimiento": "neutral"
+    },
+    {
+        "review_es": "No es ni de lo mejor ni de lo peor que vi este año. Entretiene lo justo para pasar el rato.", 
+        "sentimiento": "neutral"
+    },
+    {
+        "review_es": "La segunda parte retoma la historia unos años después. Vuelven los mismos personajes y se suman dos nuevos.", 
+        "sentimiento": "neutral"
+    },
+    {
+        "review_es": "Me la recomendó un compañero de trabajo. La vi completa, aunque no creo que la vuelva a ver ni que se la recomiende a nadie en particular.", 
+        "sentimiento": "neutral"
+    },
+    {
+        "review_es": "El tema principal es la amistad entre dos hombres de distintas generaciones. La narración es lenta y casi no hay escenas de acción.", 
+        "sentimiento": "neutral"
+    },
+    {
+        "review_es": "Visualmente tiene cosas lindas, pero la historia es bastante predecible. Para algunos puede ser un defecto y para otros no.", 
+        "sentimiento": "neutral"
+    },
+    {   
+        "review_es": "La película fue grabada en Chile y Argentina. Los créditos mencionan a más de cien personas en el equipo técnico.", 
+        "sentimiento": "neutral"
+    },
+    {   
+        "review_es": "Cumple con lo que promete el tráiler, ni más ni menos. Salí del cine sin una opinión muy fuerte.", 
+        "sentimiento": "neutral"
+    }
+]

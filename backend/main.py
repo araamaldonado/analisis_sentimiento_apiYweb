@@ -28,9 +28,9 @@ Texto = Annotated[str, StringConstraints(max_length=500)]
 
 
 class LoteInput(BaseModel):
-    textos: list[Texto] = Field(min_length=1, max_length=64)
+    textos: list[Texto] = Field(min_length=1, max_length=100)
 
 @app.post("/api/sentiment/batch")
-@limiter.limit("5/minute")
+@limiter.limit("30/minute")
 def sentiment_batch_endpoint(request: Request, datos: LoteInput):
     return {"resultados": analizar_sentimientos_lote(datos.textos)}

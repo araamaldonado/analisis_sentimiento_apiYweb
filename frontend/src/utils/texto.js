@@ -1,7 +1,7 @@
 // ========== Límites de la app ==========
 export const MAX_CHARS = 465 // caracteres por parte (el modelo admite ~128 tokens)
 export const MAX_PARTES = 20 // partes máximas por texto
-export const MAX_ITEMS = 200 // textos máximos por archivo
+export const MAX_ITEMS = 100 // textos máximos por archivo
 export const MAX_BYTES = 1024 * 1024 // tamaño máximo del archivo (1 MB)
 const MIN_LETRAS = 3
 const MIN_PROPORCION_LETRAS = 0.5
@@ -112,11 +112,11 @@ export function leerArchivo(nombre, contenido) {
   if (items.length === 0) {
     throw new ErrorValidacion('El archivo no contiene textos para analizar.')
   }
-  if (items.length > MAX_ITEMS) {
+  else if (items.length > MAX_ITEMS) {
     throw new ErrorValidacion(
       `El archivo tiene ${items.length} textos y el máximo es ${MAX_ITEMS}.`,
     )
-  }
+  } 
   return items
 }
 

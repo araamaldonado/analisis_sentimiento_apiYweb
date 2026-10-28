@@ -21,7 +21,18 @@ export function Cargando({ mensaje }) {
 }
 
 // ---------- Resultado de un solo texto (puede estar dividido en partes) ----------
-export function ResultadoTexto({ cargando, progreso, error, resultado }) {
+// ---------- Botón para descargar los resultados en JSON ----------
+function BotonDescarga({ onDescargar }) {
+  return (
+    <div className="acciones">
+      <button type="button" className="button-dl btn" onClick={onDescargar}>
+        Descargar resultados (.json)
+      </button>
+    </div>
+  )
+}
+
+export function ResultadoTexto({ cargando, progreso, error, resultado, onDescargar }) {
   if (cargando) return <Cargando mensaje={progreso} />
   if (error) return <p className="error">{error}</p>
 
@@ -45,6 +56,7 @@ export function ResultadoTexto({ cargando, progreso, error, resultado }) {
             </ol>
           </details>
         )}
+        {onDescargar && <BotonDescarga onDescargar={onDescargar} />}
       </>
     )
   }
@@ -53,7 +65,7 @@ export function ResultadoTexto({ cargando, progreso, error, resultado }) {
 }
 
 // ---------- Resultado de un archivo con varios textos ----------
-export function ResultadoLote({ cargando, progreso, error, lote }) {
+export function ResultadoLote({ cargando, progreso, error, lote, onDescargar }) {
   if (cargando) return <Cargando mensaje={progreso} />
 
   let contenido = null
@@ -103,6 +115,8 @@ export function ResultadoLote({ cargando, progreso, error, lote }) {
             ))}
           </ul>
         </details>
+
+        {onDescargar && <BotonDescarga onDescargar={onDescargar} />}
       </>
     )
   }

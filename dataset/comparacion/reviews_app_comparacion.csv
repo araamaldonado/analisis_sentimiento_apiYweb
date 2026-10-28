@@ -1,0 +1,101 @@
+﻿n;comentario;esperado;obtenido;confianza;resultado
+1;Esta es la película más difícil que he visto ... El contenido emocional es horr…;positivo;negativo;88%;Incorrecto
+2;Muy mala película.Tal vez lo peor que he visto.Invasión alienígena, un Blob, si…;negativo;negativo;98%;Correcto
+3;Es una producción de bajo presupuesto, filmada casi toda en una sola locación.…;neutral;neutral;63%;Correcto
+4;Desde el Capitolio del Nepotismo del mundo viene otra película de chatarra en u…;negativo;negativo;97%;Correcto
+5;"Me di una patada de Reynolds diciéndole a su abogado: ""Mira, he hecho una gran…";negativo;negativo;58%;Correcto
+6;Esta película, pensé, fue el gran viaje que Forrest Gump debería haber sido.Es…;positivo;positivo;97%;Correcto
+7;"""El incubus"" es una mezcla del bien (un interesante misterio de asesinato), lo…";negativo;negativo;89%;Correcto
+8;Probablemente la peor película que he visto, la actuación y la historia fueron…;negativo;negativo;98%;Correcto
+9;Como alguien que generalmente desprecia a Ali G, Ali G Indahouse era absolutame…;positivo;negativo;43%;Incorrecto
+10;La película dura dos horas y diez minutos y está ambientada en Madrid en los añ…;neutral;neutral;63%;Correcto
+11;La calidad del NOIR de Foley en esta película de pulpa saturada e intensa apare…;positivo;negativo;68%;Incorrecto
+12;Pensé que esta película era brillante.Era tan divertido y tan cierto también.Un…;positivo;positivo;97%;Correcto
+13;Grim en lugar de divertirse, enérgico en lugar de juguetón, aburrido en lugar d…;negativo;neutral;81%;Incorrecto
+14;Cuando salió esta película, había visto a Geena Davis jugar solo roles suaves y…;positivo;positivo;67%;Correcto
+15;Esta película toma la voz del terror y lo hace mejor.Holmes está protegiendo a…;positivo;positivo;83%;Correcto
+16;Una película altamente original con una gran cantidad de géneros y técnicas de…;positivo;positivo;97%;Correcto
+17;Todo lo que puedo decir, es que es una de las mejores películas documentales de…;positivo;positivo;97%;Correcto
+18;La película está dividida en tres partes y cada una transcurre en una época dif…;neutral;positivo;77%;Incorrecto
+19;Maravillosos actores.Escritura pésimo y no demasiado grande de dirección tampoc…;negativo;negativo;97%;Correcto
+20;Ok, soy un gran fanático de Traci, así que solo estar en la película automática…;positivo;positivo;85%;Correcto
+21;Un gran conjunto de Ensemble!Un accidente remembrance de los días más jóvenes s…;positivo;positivo;96%;Correcto
+22;Bueno, soy un bailarín tan automáticamente, me gustó esta película.Lo único que…;positivo;positivo;93%;Correcto
+23;Tal vez el sujeto era bueno, pero se puso a un script que falla en el ritmo.Tal…;negativo;negativo;95%;Correcto
+24;El tema principal es la amistad entre dos hombres de distintas generaciones. La…;neutral;negativo;85%;Incorrecto
+25;Tiene algunas escenas interesantes y otras que se hacen largas. En general no m…;neutral;neutral;50%;Correcto
+26;¡Qué guión, qué historia, qué desastre!;negativo;negativo;95%;Correcto
+27;La película está disponible en varias plataformas de streaming. Tiene subtítulo…;neutral;neutral;57%;Correcto
+28;Esta es una de esas películas donde estaba alentando a quien pudiera terminar l…;negativo;negativo;96%;Correcto
+29;Es una película más del género. Si te gusta el policial la podés ver, y si no,…;neutral;positivo;84%;Incorrecto
+30;Definitivamente soy un fanático de Burt Reynolds, pero lo siento, este muy apes…;negativo;negativo;98%;Correcto
+31;No pierdas el tiempo o el dinero en este.El MIVIZ DECUENDO PUEDE engañarte en p…;negativo;negativo;93%;Correcto
+32;Esta película es uno de mis favoritos de todos los tiempos.Creo que Sean Penn h…;positivo;positivo;97%;Correcto
+33;"""La promesa de muerte"" es una gema de explotación perdida de los años 70 y mere…";positivo;negativo;75%;Incorrecto
+34;Esta tercera película de Pokemon es demasiado abstracta para que los niños más…;negativo;negativo;53%;Correcto
+35;En general, fue una verdadera buena película.Aunque todos los actores, además d…;negativo;positivo;87%;Incorrecto
+36;Hola, yo, compré esto en DVD de Inglaterra.Ya ves, tengo uno de esos jugadores…;negativo;neutral;58%;Incorrecto
+37;La película fue grabada en Chile y Argentina. Los créditos mencionan a más de c…;neutral;neutral;60%;Correcto
+38;Debería haber imaginado que cualquier película con la dama poltergeist en ella…;negativo;negativo;95%;Correcto
+39;Se estrenó en 2015 y fue dirigida por un director que ya había hecho dos pelícu…;neutral;positivo;49%;Incorrecto
+40;¡Esta película me hace ganas de enamorarme de nuevo! Estoy nombrando a mi sigui…;positivo;positivo;96%;Correcto
+41;Gran película, excelentes actores, gran banda sonora!¡Me encantó!Los ajustes so…;positivo;positivo;98%;Correcto
+42;"""Hak Hap"", o ""máscara negra"" (en inglés) fue una decepción.Me dijeron que era u…";negativo;negativo;96%;Correcto
+43;En general, lo llamaría un desempeño decepcionante.Intenta el antiguo enfoque d…;negativo;negativo;97%;Correcto
+44;Vi esta película cuando fue lanzada por primera vez y lo disfruté mucho.La músi…;positivo;positivo;96%;Correcto
+45;A veces se pregunta cómo algunas personas obtienen fondos para crear una pelícu…;negativo;negativo;95%;Correcto
+46;Fue mal disparado.Parece un trabajo prisa, el casting de última hora es obvio.L…;negativo;negativo;97%;Correcto
+47;.Y con la misma hermosa actriz).Esta es una película real, que cambia la perspe…;positivo;positivo;97%;Correcto
+48;Una maravillosa historia sobre las consecuencias del amor obsesivo con las herm…;positivo;positivo;91%;Correcto
+49;Esta película estaba bien hecha en todos los aspectos.La actuación es excelente…;positivo;positivo;97%;Correcto
+50;"Esta es una película realmente mediocre en la vena de ""Buckaroo Banzai"".El elen…";negativo;negativo;98%;Correcto
+51;Cumple con lo que promete el tráiler, ni más ni menos. Salí del cine sin una op…;neutral;neutral;58%;Correcto
+52;Esta es una gran película para ver con tu novia.Mi amigo y yo amamos bailar y n…;positivo;positivo;97%;Correcto
+53;Creo que esta película en realidad tiene muchas cosas bonitas que decir sobre m…;positivo;positivo;96%;Correcto
+54;Esta es una de mis películas favoritas de todos los tiempos.Bonito patético que…;positivo;positivo;91%;Correcto
+55;"Una de las películas primeras de Frances Farmer;A los 22, ella es absolutamente…";negativo;positivo;81%;Incorrecto
+56;Esta película fue, con mucho, la peor película que he tenido que soportar.No po…;negativo;negativo;98%;Correcto
+57;Aunque esta es una de las peores películas que he visto, recomendaría esta pelí…;negativo;negativo;92%;Correcto
+58;Ir, Igor, vaya, usted es la prueba de que las películas eslovenas pueden, deben…;positivo;neutral;50%;Incorrecto
+59;Si es un niño de los años 80 y no ha visto esta película, no ha sido un niño ve…;positivo;positivo;95%;Correcto
+60;"""Proximidad"" habla de un convicto (Lowe) que piensa que el personal de la prisi…";negativo;negativo;97%;Correcto
+61;Este DVD parece ser destinado a alguien que simplemente lo pondrá y lo reproduc…;negativo;negativo;96%;Correcto
+62;Película muy decepcionante.Al final ya no cuidaba a ninguno de los personajes.D…;negativo;negativo;97%;Correcto
+63;Dale a H.G. Lewis Puntos: logró incorporar bailarines exóticos, galones de su n…;negativo;neutral;70%;Incorrecto
+64;Estoy casi tentado a exigir mi dinero de vuelta de la tienda de videos.Esta pel…;negativo;negativo;98%;Correcto
+65;Las actuaciones cumplen y la fotografía es correcta. La historia es simple y si…;neutral;positivo;92%;Incorrecto
+66;Es una gran película si alguna vez ha llamado a sus autos o realmente se encuen…;positivo;positivo;97%;Correcto
+67;La vi el sábado en el cine del centro. La sala estaba a la mitad y la proyecció…;neutral;neutral;74%;Correcto
+68;Aunque es más de una película para niños, todavía lo sostiene, especialmente en…;positivo;positivo;95%;Correcto
+69;El guion tiene buenas ideas, pero el ritmo es irregular. Algunas escenas funcio…;neutral;negativo;52%;Incorrecto
+70;Esta película tiene la apariencia de un proyecto de cine estudiantil.Sí, hay al…;negativo;negativo;50%;Correcto
+71;Intenté ser paciente y de mente abierta, pero me encontré en un estado de coma.…;negativo;negativo;89%;Correcto
+72;Me la recomendó un compañero de trabajo. La vi completa, aunque no creo que la…;neutral;neutral;63%;Correcto
+73;Muy considerado en la liberación, pero como bastante descuidado.Importancia inm…;positivo;negativo;57%;Incorrecto
+74;No es ni de lo mejor ni de lo peor que vi este año. Entretiene lo justo para pa…;neutral;neutral;43%;Correcto
+75;Claramente, una película hilarante. Me enoja de ver las pobres calificaciones d…;positivo;negativo;97%;Incorrecto
+76;La vimos en familia un domingo a la tarde. A mi hermano le pareció regular y a…;neutral;neutral;71%;Correcto
+77;¡Esta película fue terrible! Lo alquilaré sin saber qué esperar. Observé los 1s…;negativo;negativo;97%;Correcto
+78;"No entiendo cómo ""2 de nosotros"" recibe una calificación tan alta ... Pensé que…";negativo;negativo;95%;Correcto
+79;No sé bien qué opinar. Hay partes que me gustaron y otras que no tanto, así que…;neutral;neutral;79%;Correcto
+80;Esta película es simplemente brillante, la actuación de SRK es simplemente incr…;positivo;positivo;96%;Correcto
+81;Leslie Nielsen es un actor muy talentoso, que hizo un gran error al hacer esta…;negativo;negativo;96%;Correcto
+82;Las violaciones ridículas de los regs de seguridad más básicos son solo el comi…;negativo;negativo;97%;Correcto
+83;La película es una canción de cuna feliz, se hizo para hacernos dormir.Y eso es…;negativo;positivo;81%;Incorrecto
+84;La banda sonora acompaña bien, aunque no destaca. Tiene un par de canciones con…;neutral;positivo;82%;Incorrecto
+85;Visualmente tiene cosas lindas, pero la historia es bastante predecible. Para a…;neutral;neutral;62%;Correcto
+86;"""Tulip"" está en el video ""Australian TODAS SHORTS"" de ""Tribe First Rites"" que m…";positivo;positivo;94%;Correcto
+87;Daniel Day Lewis en mi pie izquierdo nos da una de las mejores actuaciones de u…;positivo;positivo;97%;Correcto
+88;Acaba de ver el estreno de la ducha australiano [Xizhao] en el Festival de Cine…;positivo;positivo;95%;Correcto
+89;¡Vi a esta película por primera vez en HBO alrededor de 1983 y me encantó!Escur…;positivo;positivo;97%;Correcto
+90;No me importa la extraña película artística.Pero cuando están desparramados con…;negativo;negativo;95%;Correcto
+91;La trama sigue a una familia que se muda al campo. Durante la película aparecen…;neutral;negativo;69%;Incorrecto
+92;Es una buena comedia.Tiene las grandes características de la infancia, mintiend…;positivo;positivo;97%;Correcto
+93;Disfruté mucho esta película por su humor y pathos.Me gusta especialmente la fo…;positivo;positivo;97%;Correcto
+94;Trabajando con una de las mejores fuentes de Shakespeare, esta película logra s…;negativo;positivo;93%;Incorrecto
+95;Esta es una tonta parodia de los thrillers de los ojos privados como novelista…;negativo;negativo;96%;Correcto
+96;El cuento de Renoir de París, el Cancan, una lavadora-niña y el Moulin Rouge.a…;positivo;positivo;95%;Correcto
+97;La segunda parte retoma la historia unos años después. Vuelven los mismos perso…;neutral;neutral;53%;Correcto
+98;Esta es una gran película oscura, oscura, offbeat, una moderna adaptación del d…;positivo;positivo;94%;Correcto
+99;Cada niño tiene esa película que aparece en VHS cuando no tiene nada que ver, o…;positivo;positivo;93%;Correcto
+100;Es una adaptación de una novela. Cambia el final respecto del libro, aunque man…;neutral;neutral;59%;Correcto

@@ -13,6 +13,8 @@ import {
   leerArchivo,
   validarTexto,
 } from '../utils/texto'
+import { analizarLote, mensajeErrorServidor } from '../utils/lote'
+import { descargarJSON, nombreResultados } from '../utils/descarga'
 
 const MENSAJE_ERROR = 'No se pudo analizar el texto. Intente nuevamente.'
 const UMBRAL_ALERTA = MAX_CHARS * 0.9
@@ -96,7 +98,7 @@ function Home() {
       const r = await analizarTexto(text, (actual, total) =>
         setProgreso(total > 1 ? `Analizando parte ${actual}/${total}` : ''),
       )
-      setResultado(r)
+      setResultado({ ...r, texto: text }) // se guarda el texto analizado para poder descargarlo
     } catch (err) {
       if (err instanceof ErrorCancelado) {
         setError('Análisis cancelado.')
@@ -139,20 +141,13 @@ function Home() {
 
       setProgreso(`Analizando ${items.length} textos...`)
 
-      // Extraemos solo los textos en un array plano
-      const listaTextos = items.map(item => item.texto)
-
-      // ¡UNA SOLA PETICIÓN POST PARA TODO EL ARCHIVO ENTERO!
-      const resultadosLote = await apisentiment_batch_fetch(listaTextos)
-
-      if (cancelar.current) throw new ErrorCancelado()
-
-      // Combinamos cada resultado con su respectivo item original
-      const analizados = items.map((item, index) => ({
-        ...item,
-        etiqueta: resultadosLote[index].etiqueta,
-        confianza: resultadosLote[index].confianza
-      }))
+      // Valida cada texto, divide los largos en partes, manda las partes en tandas
+      // (el backend acepta hasta MAX_ITEMS por petición) y junta el resultado de cada texto
+      const analizados = await analizarLote(items, apisentiment_batch_fetch, {
+        estaCancelado: () => cancelar.current,
+        alProgresar: (actual, total) =>
+          setProgreso(`Analizando parte ${actual}/${total} de ${items.length} textos...`),
+      })
 
       setLote({ archivo: archivo.name, items: analizados })
 
@@ -163,12 +158,20 @@ function Home() {
         setErrorLote(err.message)
       } else {
         console.error(err)
-        setErrorLote('No se pudo leer o analizar el archivo.')
+        setErrorLote(mensajeErrorServidor(err) ?? 'No se pudo leer o analizar el archivo.')
       }
     } finally {
       setCargando(null)
       setProgreso('')
     }
+  }
+
+  const descargarResultadoTexto = () => {
+    if (resultado) descargarJSON([resultado], 'resultado_sentimiento.json')
+  }
+
+  const descargarResultadoLote = () => {
+    if (lote) descargarJSON(lote.items, nombreResultados(lote.archivo))
   }
 
   const botonCancelar = (
@@ -232,6 +235,7 @@ function Home() {
                 progreso={progreso}
                 error={error}
                 resultado={resultado}
+                onDescargar={descargarResultadoTexto}
               />
             </div>
 
@@ -309,6 +313,7 @@ function Home() {
                 progreso={progreso}
                 error={errorLote}
                 lote={lote}
+                onDescargar={descargarResultadoLote}
               />
             </div>
           </div>

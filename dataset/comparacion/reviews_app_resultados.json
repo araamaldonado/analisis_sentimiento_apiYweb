@@ -1,0 +1,502 @@
+[
+  {
+    "comentario": "Esta es la película más difícil que he visto ... El contenido emocional es horrible, pero inolvidable.Una mujer que está acusada de ser un activista político es llevado a interrogarlo.Toda la película gira en su interrogación.Alan Rickman y Madeline Stowe tienen roles intensos y poderosos para los que merecen Oscar para sus actuaciones.",
+    "sentimiento": "negativo",
+    "confianza": "88%"
+  },
+  {
+    "comentario": "Muy mala película.Tal vez lo peor que he visto.Invasión alienígena, un Blob, sin la actuación.Meteorito se vuelve hermosa mujer en un cuerpo de huéspedes para la lengua desagradable.Mala parcela, mala lengua falsa.Comedia absurda que vale la pena.Lávese el pelo o saca la basura.",
+    "sentimiento": "negativo",
+    "confianza": "98%"
+  },
+  {
+    "comentario": "Es una producción de bajo presupuesto, filmada casi toda en una sola locación. Los efectos son sencillos y el elenco es reducido.",
+    "sentimiento": "neutral",
+    "confianza": "63%"
+  },
+  {
+    "comentario": "Desde el Capitolio del Nepotismo del mundo viene otra película de chatarra en una envoltura de lujo.\"CQ\" cuenta un lío cojo y inconexo de una historia que es poco más que un montón de caricaturas tontas, un bebé y un hombre recto Davies corriendo tratando de hacer una película de ciencia fidelidad estúpida.No puedo pensar en ninguna razón, a nadie quisiera pasar tiempo con este ridículo intento de fabricación de cine.(D)",
+    "sentimiento": "negativo",
+    "confianza": "97%"
+  },
+  {
+    "comentario": "Me di una patada de Reynolds diciéndole a su abogado: \"Mira, he hecho una gran cantidad de cosas en mi vida, pero nunca maté a nadie\".Obviamente, se olvidó de su carrera que se deslizó por la colina después de que comenzó a hacer películas estúpidas como 'CANNONBALL RUN'.Originalmente se suponía que la evidencia física era una secuela de \"el borde irregular\" que Glen Close rechazó.El veredicto está en, evita la evidencia física.",
+    "sentimiento": "negativo",
+    "confianza": "58%"
+  },
+  {
+    "comentario": "Esta película, pensé, fue el gran viaje que Forrest Gump debería haber sido.Es un regalo raro para ver una película de cable a la mitad del día y encontrarse con una película extranjera que se hace tan bien.Esta película está muy bien actuada, y sugiero que cualquiera que pueda tomar subtítulos.",
+    "sentimiento": "positivo",
+    "confianza": "97%"
+  },
+  {
+    "comentario": "\"El incubus\" es una mezcla del bien (un interesante misterio de asesinato), lo malo (un guión desconectado, una resolución descuidada, escenas de ataque mal hechas) y los extraños (connotones incestuosos fuertes, una actuación extrañamente somnolienta y rígida por John Cassavetes- ¿Estaba ese personaje realmente destinado a ser tan \"wacko\"?).Tampoco tan tan ofensivo no tan ofensivo, pero tampoco es particularmente exitoso.(* 1/2)",
+    "sentimiento": "negativo",
+    "confianza": "89%"
+  },
+  {
+    "comentario": "Probablemente la peor película que he visto, la actuación y la historia fueron terribles y casi me quedé dormido.El único buen actor fue Colm, me dijo.Tuve la impresión de ver las mismas escenas una y otra vez hasta el final, sin emoción, ni carisma ... ¡nada!",
+    "sentimiento": "negativo",
+    "confianza": "98%"
+  },
+  {
+    "comentario": "Como alguien que generalmente desprecia a Ali G, Ali G Indahouse era absolutamente brillante.Cuando lo estaba mirando, estaba en un ajuste histérico.Sí, es sexista, grosero y extremadamente crudo, y me encantó.Como algunas comedias solo tienen una o dos escenas cómicas, esta película se ríe, A-Thon.Nunca he visto una comedia tan original como Ali G Indahouse. Para una comedia protagonizada por Ali G, esto sería digno de un 8 de 10. Absolutamente Brillante.",
+    "sentimiento": "negativo",
+    "confianza": "43%"
+  },
+  {
+    "comentario": "La película dura dos horas y diez minutos y está ambientada en Madrid en los años ochenta. El protagonista es un periodista que investiga un caso de corrupción.",
+    "sentimiento": "neutral",
+    "confianza": "63%"
+  },
+  {
+    "comentario": "La calidad del NOIR de Foley en esta película de pulpa saturada e intensa aparentemente está encajada \"perfectamente\".Disparo por tiro, editar por edición, la película se desarrolla alrededor de un boxeador perturbado descubriendo su propio propósito (o falta de ella).Los otros comentarios quizás indican una falta de interés de la pulpa, ¡pero personalmente creo que esta es una pieza cinematográfica excelente.",
+    "sentimiento": "negativo",
+    "confianza": "68%"
+  },
+  {
+    "comentario": "Pensé que esta película era brillante.Era tan divertido y tan cierto también.Una gran idea para una película.Cinco grupos de amigos en su camino a las escuadras.Tengo que decir que Matt Newton como Mason fue probablemente mi personaje favorito.Desearía poder darle a esta película más de una calificación de 10.",
+    "sentimiento": "positivo",
+    "confianza": "97%"
+  },
+  {
+    "comentario": "Grim en lugar de divertirse, enérgico en lugar de juguetón, aburrido en lugar de interesante.No te dará \"los Willies\", pero simplemente te puede brillar o enviar a dormir.Y ciertamente te hará preguntarte: \"¿Qué estaban pensando?\"(* 1/2)",
+    "sentimiento": "neutral",
+    "confianza": "81%"
+  },
+  {
+    "comentario": "Cuando salió esta película, había visto a Geena Davis jugar solo roles suaves y femeninos ... Esta película era algo más que suave y femenina.Grandes líneas, gran acción ... Ella y Samuel l realmente hicieron clic.Demasiado violento para los niños, pero si usted y sus otros significativos están tratando de estar de acuerdo en una película, intente este tipo de tamaño.¡Ve a Geena!¡Ve a Geena!",
+    "sentimiento": "positivo",
+    "confianza": "67%"
+  },
+  {
+    "comentario": "Esta película toma la voz del terror y lo hace mejor.Holmes está protegiendo a un inventor en Suiza y está en el camino del profesor Moriarity, que se ha convertido en un nazi.Esta es una mejor versión de Holmes en un mundo WWII.Rathbone hace un gran trabajo con Holmes como espía y un detective.Mira esto si te gustó la voz del terror.",
+    "sentimiento": "positivo",
+    "confianza": "83%"
+  },
+  {
+    "comentario": "Una película altamente original con una gran cantidad de géneros y técnicas de cine con un efecto sorprendente y poderoso.Todas las personas involucradas solo dieron su mejor y se muestran en la pantalla.Una película comprometida con un reparto y la tripulación comprometidos.Simplemente brillante.¡Sólo vete a verlo ahora!",
+    "sentimiento": "positivo",
+    "confianza": "97%"
+  },
+  {
+    "comentario": "Todo lo que puedo decir, es que es una de las mejores películas documentales del océano.¡Impresiona inmensamente por filmación profesional, paisajes e ideas!Lo que he visto durante esos 50 minutos no se puede comparar con ninguna otra visión del planeta azul.",
+    "sentimiento": "positivo",
+    "confianza": "97%"
+  },
+  {
+    "comentario": "La película está dividida en tres partes y cada una transcurre en una época diferente. Al final las historias se conectan.",
+    "sentimiento": "positivo",
+    "confianza": "77%"
+  },
+  {
+    "comentario": "Maravillosos actores.Escritura pésimo y no demasiado grande de dirección tampoco.Mi principal problema fue que simplemente no me importaba a ninguna de estas personas.No es el asesino, no las víctimas.Los ajustes fueron bastante monótonos.El personaje de Dennis Quaid estaba tan mal escrito, ni siquiera me importaba cuando llegó el final.Él recuperó a su hijo.¡Vaya cosa!Quería devolver mi dinero.",
+    "sentimiento": "negativo",
+    "confianza": "97%"
+  },
+  {
+    "comentario": "Ok, soy un gran fanático de Traci, así que solo estar en la película automáticamente lo hace de rango en la calificación de 8.5+.Pero incluso además, además de su estar, pensé que era una buena película, especialmente por ser una película de HBO.Pero me temo que si llevas a Traci fuera de la película, simplemente estaría bien.Pero una persona no puede hacer eso está en ella y es una actriz maravillosa.Ella sigue mejorando y mejorando.",
+    "sentimiento": "positivo",
+    "confianza": "85%"
+  },
+  {
+    "comentario": "Un gran conjunto de Ensemble!Un accidente remembrance de los días más jóvenes sin preocupaciones.Esta película me lleva de vuelta cuando fui al campamento de verano.El verano indio, mientras que lleno de bromas prácticas y bromas, se trata de crecer y llegar a un acuerdo con la vida con la vida de la edad media.Mi familia y yo disfrutamos mucho de esta película.",
+    "sentimiento": "positivo",
+    "confianza": "96%"
+  },
+  {
+    "comentario": "Bueno, soy un bailarín tan automáticamente, me gustó esta película.Lo único que no me gustó fue que no tenían mucho bailando, ya que pensaba que habría.Pero tengo que decir que era una buena película de baile.Creo que debería haber más canciones también.¡Pero fue una buena película como dije antes!Mi calificación 9/10!",
+    "sentimiento": "positivo",
+    "confianza": "93%"
+  },
+  {
+    "comentario": "Tal vez el sujeto era bueno, pero se puso a un script que falla en el ritmo.Tal vez el autor estaba tratando de obtener algo de ritmo lento como alienígena, pero en lugar de ser inquietante, esta película resultó aburrida.Técnicamente bueno, de todos modos, una pena por la falta de tensión.",
+    "sentimiento": "negativo",
+    "confianza": "95%"
+  },
+  {
+    "comentario": "El tema principal es la amistad entre dos hombres de distintas generaciones. La narración es lenta y casi no hay escenas de acción.",
+    "sentimiento": "negativo",
+    "confianza": "85%"
+  },
+  {
+    "comentario": "Tiene algunas escenas interesantes y otras que se hacen largas. En general no me aburrió, pero tampoco me dejó pensando.",
+    "sentimiento": "neutral",
+    "confianza": "50%"
+  },
+  {
+    "comentario": "¡Qué guión, qué historia, qué desastre!",
+    "sentimiento": "negativo",
+    "confianza": "95%"
+  },
+  {
+    "comentario": "La película está disponible en varias plataformas de streaming. Tiene subtítulos en español y en inglés.",
+    "sentimiento": "neutral",
+    "confianza": "57%"
+  },
+  {
+    "comentario": "Esta es una de esas películas donde estaba alentando a quien pudiera terminar la película lo más rápido.Quería ver a los policías matar a Keaton y García solo para hacerlo.Básicamente, este es el trato: dos policías tienen que morir y un tercero tiene que obtener quemaduras horribles en su rostro para que el hijo de García obtenga un trasplante de médula ósea de Killer Keaton condenado.¿Vale la pena?¡No!",
+    "sentimiento": "negativo",
+    "confianza": "96%"
+  },
+  {
+    "comentario": "Es una película más del género. Si te gusta el policial la podés ver, y si no, tampoco te perdés nada importante.",
+    "sentimiento": "positivo",
+    "confianza": "84%"
+  },
+  {
+    "comentario": "Definitivamente soy un fanático de Burt Reynolds, pero lo siento, este muy apesta.La mayor parte del diálogo es ridículo y la única parcela interesante es en los últimos cinco minutos de la película.No puedo creer que incluso lo hiciera.¿Es realmente tan difícil para el dinero?",
+    "sentimiento": "negativo",
+    "confianza": "98%"
+  },
+  {
+    "comentario": "No pierdas el tiempo o el dinero en este.El MIVIZ DECUENDO PUEDE engañarte en pensar que este adolescente-thriller, mientras que casi no se trata de romper ningún registro, podría entretenerse ligeramente durante 80 minutos. No lo hará asustado, reír, llorar o incluso desafiar a suintelecto.Te dejará preguntándote cómo demonios esta película ha terminado la producción.Sí, realmente es tan pobre.",
+    "sentimiento": "negativo",
+    "confianza": "93%"
+  },
+  {
+    "comentario": "Esta película es uno de mis favoritos de todos los tiempos.Creo que Sean Penn hizo un gran trabajo de actuación.Es una de las pocas historias verdaderas que lo hicieron para filmar que realmente me gustan.Está en mis 10 mejores películas de todos los tiempos.Lo veo una y otra vez y nunca me canses de eso.¡Gran pelicula!",
+    "sentimiento": "positivo",
+    "confianza": "97%"
+  },
+  {
+    "comentario": "\"La promesa de muerte\" es una gema de explotación perdida de los años 70 y merece ser visto.Técnicamente, un poco de desorden y con una acción de los nuevos tipos de Yawk amateur, esta película nunca se aborda.Recomiendo encarecidamente seguimiento de esto.Es un hoot y medio.",
+    "sentimiento": "negativo",
+    "confianza": "75%"
+  },
+  {
+    "comentario": "Esta tercera película de Pokemon es demasiado abstracta para que los niños más pequeños sigan y demasiado repetidos para entretener a los niños mayores.El mensaje de la película, sobre el trato con la pérdida, se levanta por el regreso del padre de la joven durante los créditos de la película.El cohete del equipo proporciona un poco de diversión, pero no son realmente parte de la pequeña parcela, por lo que no aparecen muy a menudo.",
+    "sentimiento": "negativo",
+    "confianza": "53%"
+  },
+  {
+    "comentario": "En general, fue una verdadera buena película.Aunque todos los actores, además de Jones, chupan.Cuando estaba a la mitad, fue a través de ella, realmente me estaba cansando de ver 'al'.Solo el cambio que hubiera hecho para tener más espaldas destellos, posiblemente con el verdadero Cobb.",
+    "sentimiento": "positivo",
+    "confianza": "87%"
+  },
+  {
+    "comentario": "Hola, yo, compré esto en DVD de Inglaterra.Ya ves, tengo uno de esos jugadores de múltiples regiones.Pensé que sería divertido conseguir una película genial para mostrar a mis amigos.Bueno, sorpresa a Amy-Jo Johnson, apenas está en la película.Aunque ella está en la portada.Es realmente difícil imaginar cómo una película se hizo este mal en primer lugar.Tal vez alguien tenga un fondo fiduciario. Oh ... se trata de vampiros que viven en la playa",
+    "sentimiento": "neutral",
+    "confianza": "58%"
+  },
+  {
+    "comentario": "La película fue grabada en Chile y Argentina. Los créditos mencionan a más de cien personas en el equipo técnico.",
+    "sentimiento": "neutral",
+    "confianza": "60%"
+  },
+  {
+    "comentario": "Debería haber imaginado que cualquier película con la dama poltergeist en ella no va a ser buena.En realidad, comienza bien, pero durante la primera escena de asesinato, descubre que la película que está viendo es una película dentro de una película.Hay gente sentada en un cine viendo esa película.Una niña en la audiencia es tan molesta que me habría dado la vuelta y la estranguí.Un poco extraño, pero lejos de lo bueno.",
+    "sentimiento": "negativo",
+    "confianza": "95%"
+  },
+  {
+    "comentario": "Se estrenó en 2015 y fue dirigida por un director que ya había hecho dos películas parecidas. Participa un elenco de actores conocidos.",
+    "sentimiento": "positivo",
+    "confianza": "49%"
+  },
+  {
+    "comentario": "¡Esta película me hace ganas de enamorarme de nuevo! Estoy nombrando a mi siguiente hija \"Adelaide\".Solo para que alguien que canta como Ol Blue Eyes pueda desmayarse un día, y sentir las mariposas, sentí que escuchaba, ¡y ni siquiera era para mí!Le doy un 9/10",
+    "sentimiento": "positivo",
+    "confianza": "96%"
+  },
+  {
+    "comentario": "Gran película, excelentes actores, gran banda sonora!¡Me encantó!Los ajustes son perfectos, diálogos, situaciones, historia ... ¡todos juntos mezclados para dar a esta obra maestra!Clooney y Turturro son magníficos y los chicos de fondo empapados son simplemente encantadores y contagiosos con su música.:)",
+    "sentimiento": "positivo",
+    "confianza": "98%"
+  },
+  {
+    "comentario": "\"Hak Hap\", o \"máscara negra\" (en inglés) fue una decepción.Me dijeron que era una especie de \"versión japonesa de la matriz\".Imagina mi decepción.La película fue golpeada mal, o la banda sonora, no se puso en su película.Otra cosa es que el diálogo fue bastante malo.Había muy poco pensamiento puesto en la versión en inglés de esta película y apela solo al género \"Acción sin sentido\".No una película me gustaría volver a ver.",
+    "sentimiento": "negativo",
+    "confianza": "96%"
+  },
+  {
+    "comentario": "En general, lo llamaría un desempeño decepcionante.Intenta el antiguo enfoque de \"antología de horror\", pero falla miserablemente.La actuación fue mala, y también lo fueron las historias.Cualquier piel que se muestra en la película fue obviamente aleatoria, solo para atraer la calificación R de sexo.Típico, supongo, pero no obstante.¡Toma tus $ 5 y alquila una película real en su lugar!",
+    "sentimiento": "negativo",
+    "confianza": "97%"
+  },
+  {
+    "comentario": "Vi esta película cuando fue lanzada por primera vez y lo disfruté mucho.La música y el paisaje son hermosos.Compré la cinta VHS hace unos años y lo cuidé con frecuencia.Lo recomendaría a cualquiera que ame una película romántica o una música antigua de Elton John.",
+    "sentimiento": "positivo",
+    "confianza": "96%"
+  },
+  {
+    "comentario": "A veces se pregunta cómo algunas personas obtienen fondos para crear una película tan mala como esta.Solo puede pararse unos 5 minutos de esta total pieza de basura antes de volver a entrar en la taquilla y exigir su dinero.Ahora miraré a Michael Clarke Duncan con aprensión ... por qué ... Él prestó su nombre a este Vermin.",
+    "sentimiento": "negativo",
+    "confianza": "95%"
+  },
+  {
+    "comentario": "Fue mal disparado.Parece un trabajo prisa, el casting de última hora es obvio.La escritura es muy débil.Bueno para el escenario, no película.Me siento mal por Andrew McCarthy.Es un muy buen actor que no ha estado obteniendo buenos roles últimamente.Este papel no fue para él.Tal vez me alegro de haber sido recogido todavía.En el circuito del festival esta película se quedará.",
+    "sentimiento": "negativo",
+    "confianza": "97%"
+  },
+  {
+    "comentario": ".Y con la misma hermosa actriz).Esta es una película real, que cambia la perspectiva de la vida un poco, una historia inteligente y hermosa, dirigida magistralmente, excelentes actores principales, cinematografía magistral.Acabo de ver la película la 3ª o 4ª vez, y todavía creo que es uno de los mejores que he visto en mi vida.Y si no debes estar infeliz con el final de 'White': 'Red' pone un final feliz con toda la trilogía.",
+    "sentimiento": "positivo",
+    "confianza": "97%"
+  },
+  {
+    "comentario": "Una maravillosa historia sobre las consecuencias del amor obsesivo con las hermosas calles traseras románticas de París como su ubicación.Nos transportamos a través del tiempo y veamos que la trama se desarrolla a partir de las perspectivas de los tres personajes principales a medida que el misterio se desenrolla.",
+    "sentimiento": "positivo",
+    "confianza": "91%"
+  },
+  {
+    "comentario": "Esta película estaba bien hecha en todos los aspectos.La actuación es excelente junto con la banda sonora de audio fina que compré porque estaba tan envejecida.Es mi película favorita de todo el tiempo por delante de Eastwoods \"Blanco Hunter, Negro Heart\".Esta película es simplemente la mejor.cheers zuf",
+    "sentimiento": "positivo",
+    "confianza": "97%"
+  },
+  {
+    "comentario": "Esta es una película realmente mediocre en la vena de \"Buckaroo Banzai\".El elenco corre como \"Mad Max\" Wannabes, y parecen estar compartiendo una broma que no quieren compartir con la audiencia.Wheeler-Nicholson es una de las actrices de placer culpables que está encantado de tropezar con películas, pero no vale la pena el precio del alquiler.Space Maggot comienza un incendio eléctrico, y quema un voto de 4.",
+    "sentimiento": "negativo",
+    "confianza": "98%"
+  },
+  {
+    "comentario": "Cumple con lo que promete el tráiler, ni más ni menos. Salí del cine sin una opinión muy fuerte.",
+    "sentimiento": "neutral",
+    "confianza": "58%"
+  },
+  {
+    "comentario": "Esta es una gran película para ver con tu novia.Mi amigo y yo amamos bailar y nos dirigimos a esta película en la tienda de videos.Tuvimos que conseguirlo.Sin violencia y una historia tan calentadora, es una gran película para relajarse y simplemente disfrutar de su noche.Recomendaría esta película a cualquier familia o solo un grupo de chicas que buscan una película linda.",
+    "sentimiento": "positivo",
+    "confianza": "97%"
+  },
+  {
+    "comentario": "Creo que esta película en realidad tiene muchas cosas bonitas que decir sobre mucha gente (Johnny Carson, Ted Koppel), y muestra que Letterman y Leno realmente les gustaban y se respetaban mucho.Trate a Williams como el maestro de medio kung fu, el medio padrino, como Mike Ovitz, es estupenda.",
+    "sentimiento": "positivo",
+    "confianza": "96%"
+  },
+  {
+    "comentario": "Esta es una de mis películas favoritas de todos los tiempos.Bonito patético que dices?Bueno, sí lo es.Pero Chris es increíblemente divertido.Su brillo inocente sale en esta película más que en cualquiera de sus otras películas.Mire las escenas de ambas escenas de motel, cuando Spade se captura con su cremallera hacia abajo y la otra: \"¡Simplemente desaparezca por el amor de Dios!\"",
+    "sentimiento": "positivo",
+    "confianza": "91%"
+  },
+  {
+    "comentario": "Una de las películas primeras de Frances Farmer;A los 22, ella es absolutamente hermosa.Bing Crosby está en gran voz, pero las canciones no son lo mejor.Martha Raye y Bob Burns son interesantes, pero su comedia, probablemente excelente en su época, es realmente cursi hoy.Roy Rogers también aparece, en un rol de canto.En mi opinión, solo vale la pena observar si eres un fanático de Frances Fanker, y posiblemente un fanático de Bing Crosby.",
+    "sentimiento": "positivo",
+    "confianza": "81%"
+  },
+  {
+    "comentario": "Esta película fue, con mucho, la peor película que he tenido que soportar.No podía creer que intentaran pasarlo como una película seria, era tan malo que ni siquiera podía reírme de su intento patético de entretenerme.Si quieres horror cursi, puedes reírte, alquila el Dr. Giggles en su lugar.",
+    "sentimiento": "negativo",
+    "confianza": "98%"
+  },
+  {
+    "comentario": "Aunque esta es una de las peores películas que he visto, recomendaría esta película para cualquiera que le guste buena pirotecnia.Su trama era terrible.Su horror no fue realmente tan bueno.Su ciencia ficción era aún peor.¡Pero su pirotecnia fue excelente!(Mathilda puede ser extremadamente hermosa también).",
+    "sentimiento": "negativo",
+    "confianza": "92%"
+  },
+  {
+    "comentario": "Ir, Igor, vaya, usted es la prueba de que las películas eslovenas pueden, deben y deben ser diferentes.Hay alma en ella, y esto es raro.¡No dejes que nadie te ponga abajo!",
+    "sentimiento": "neutral",
+    "confianza": "50%"
+  },
+  {
+    "comentario": "Si es un niño de los años 80 y no ha visto esta película, no ha sido un niño verdadero de los años 80.¿Cómo no puedes amar a esas grandes chipmunks (no se olvide de los chipettes), las líneas y las canciones?Años más tarde, todavía puedo cantar cada palabra a cada canción.La línea de la historia es genial y mucho mejor que las películas para niños de hoy.Es simplemente divertido y vale la pena el alquiler, incluso si todo ha crecido.",
+    "sentimiento": "positivo",
+    "confianza": "95%"
+  },
+  {
+    "comentario": "\"Proximidad\" habla de un convicto (Lowe) que piensa que el personal de la prisión está fuera para matarlo.Esta película muy ordinaria es una acción / drama con una parcela débil;personajes estereotipados, mal desarrollados;y una actuación unidimensional por Lowe.Una película olvidable que no es digna de más comentarios.",
+    "sentimiento": "negativo",
+    "confianza": "97%"
+  },
+  {
+    "comentario": "Este DVD parece ser destinado a alguien que simplemente lo pondrá y lo reproducirá en un bucle sin fin en el fondo.Está organizado como una serie de videos musicales del Gran Cañón establecido en varias piezas de música de sueño de mandarina. Desafortunadamente, la música TD es aburrida, y la transferencia a DVD se ve bastante borrosa y tenue.Demasiado caro un DVD para lo que es.",
+    "sentimiento": "negativo",
+    "confianza": "96%"
+  },
+  {
+    "comentario": "Película muy decepcionante.Al final ya no cuidaba a ninguno de los personajes.Disfruté viendo a Ving Rhames en una parte muy pequeña, y William Macy fue buena como siempre, todavía no vale la pena observar.Comienza fuerte y sigue siendo más débil y más débil.A los insomisos le gustarán, ya que estoy seguro de que los pondrá a dormir.",
+    "sentimiento": "negativo",
+    "confianza": "97%"
+  },
+  {
+    "comentario": "Dale a H.G. Lewis Puntos: logró incorporar bailarines exóticos, galones de su notoria sangre falsa, y Henny Youngman, todo en una película.\"Los Gore Gore Girls\" fue la canción de cintas de terror de Lewis, y termina con una cabeza siendo aplastada por un automóvil.Oh ... Henny juega a un propietario de un club de noche seguramente cuyas chicas se están cayendo para la carnicería estándar de Lewis.",
+    "sentimiento": "neutral",
+    "confianza": "70%"
+  },
+  {
+    "comentario": "Estoy casi tentado a exigir mi dinero de vuelta de la tienda de videos.Esta película plumba las profundidades de la inanidad y es casi completamente inconsciente.Nunca rescate de una película temprano, pero esto fue doloroso para ver.Un desperdicio exhaustivo de celuloide.Mi voto 1/10 (habría sido cero).",
+    "sentimiento": "negativo",
+    "confianza": "98%"
+  },
+  {
+    "comentario": "Las actuaciones cumplen y la fotografía es correcta. La historia es simple y sigue la estructura de siempre en este tipo de películas.",
+    "sentimiento": "positivo",
+    "confianza": "92%"
+  },
+  {
+    "comentario": "Es una gran película si alguna vez ha llamado a sus autos o realmente se encuentran en autos viejos, rápidos o exóticos.Tiene una parcela y mucha acción.Las escenas de automóviles son excelentes, excepto por la escena de salto de automóviles totalmente falsos.Todas las otras escenas son geniales.Realmente lo disfruté y espero que todos los demás también lo hagan.",
+    "sentimiento": "positivo",
+    "confianza": "97%"
+  },
+  {
+    "comentario": "La vi el sábado en el cine del centro. La sala estaba a la mitad y la proyección empezó a horario.",
+    "sentimiento": "neutral",
+    "confianza": "74%"
+  },
+  {
+    "comentario": "Aunque es más de una película para niños, todavía lo sostiene, especialmente en comparación con la línea de ensamblaje más reciente que se realizan películas animadas.La música es fantástica !!No me importa la edad que tengas, todavía te encontrarás rockin a \"Chicas de rock and roll\" y muñecas de diamantes \". Definitivamente una necesidad para los amantes de la animación.",
+    "sentimiento": "positivo",
+    "confianza": "95%"
+  },
+  {
+    "comentario": "El guion tiene buenas ideas, pero el ritmo es irregular. Algunas escenas funcionan y otras no tanto.",
+    "sentimiento": "negativo",
+    "confianza": "52%"
+  },
+  {
+    "comentario": "Esta película tiene la apariencia de un proyecto de cine estudiantil.Sí, hay algunas ediciones y tomas interesantes (aunque gimmicky), pero el resultado final fue juvenil. El director no parecía decir \"Mirar a esta película\".Parecía como si estuviera diciendo: \"¡Mírame! ¡Soy un director!\" Pulgares hacia abajo.",
+    "sentimiento": "negativo",
+    "confianza": "50%"
+  },
+  {
+    "comentario": "Intenté ser paciente y de mente abierta, pero me encontré en un estado de coma.Ojalá hubiera traído mi almohada de plumas de pato y ganso ... Pido disculpas a todos los grandes actores en esta película.Tal vez se le haga un título de MIT para comprender la importancia de esta película.",
+    "sentimiento": "negativo",
+    "confianza": "89%"
+  },
+  {
+    "comentario": "Me la recomendó un compañero de trabajo. La vi completa, aunque no creo que la vuelva a ver ni que se la recomiende a nadie en particular.",
+    "sentimiento": "neutral",
+    "confianza": "63%"
+  },
+  {
+    "comentario": "Muy considerado en la liberación, pero como bastante descuidado.Importancia inmensa en la historia de las artes escénicas.Un uso clásico de parcelas incrustadas.Una de mis películas favoritas.¿Por qué no se ha vuelto a liberar la banda sonora?",
+    "sentimiento": "negativo",
+    "confianza": "57%"
+  },
+  {
+    "comentario": "No es ni de lo mejor ni de lo peor que vi este año. Entretiene lo justo para pasar el rato.",
+    "sentimiento": "neutral",
+    "confianza": "43%"
+  },
+  {
+    "comentario": "Claramente, una película hilarante. Me enoja de ver las pobres calificaciones dadas a esta pieza de genio cómico. Mire esto por lo que es, una película divertida y ridícula agradable.¡Ríete por el amor de Cristo!",
+    "sentimiento": "negativo",
+    "confianza": "97%"
+  },
+  {
+    "comentario": "La vimos en familia un domingo a la tarde. A mi hermano le pareció regular y a mis papás les dio lo mismo.",
+    "sentimiento": "neutral",
+    "confianza": "71%"
+  },
+  {
+    "comentario": "¡Esta película fue terrible! Lo alquilaré sin saber qué esperar. Observé los 1st 5 minutos y la película y sabía que era una bomba. La actuación era mala y no había parcela. El monstruo es demasiado fake.La boca no se mueve. También, ¿por qué tendrían un médico jugando a un xilófono para matar al monstruo? Sería malo, ni siquiera pierdas el tiempo. (1 de cada 10)",
+    "sentimiento": "negativo",
+    "confianza": "97%"
+  },
+  {
+    "comentario": "No entiendo cómo \"2 de nosotros\" recibe una calificación tan alta ... Pensé que la primera mitad arrastrada y la segunda mitad no tenía sentido, seguido de un clímax no resuelto que no valió la pena.Sin embargo, me gustó el desempeño de Jared Harris de John Lennon, que valió la pena desperdiciar las 2 horas.",
+    "sentimiento": "negativo",
+    "confianza": "95%"
+  },
+  {
+    "comentario": "No sé bien qué opinar. Hay partes que me gustaron y otras que no tanto, así que quedo en el medio.",
+    "sentimiento": "neutral",
+    "confianza": "79%"
+  },
+  {
+    "comentario": "Esta película es simplemente brillante, la actuación de SRK es simplemente increíble, el final es tan increíblemente triste, lloro cada vez que veo esta película, es el tipo de que nunca se enferma, y puede ver una y otra vez, una película absolutamente increíblemente brillante.",
+    "sentimiento": "positivo",
+    "confianza": "96%"
+  },
+  {
+    "comentario": "Leslie Nielsen es un actor muy talentoso, que hizo un gran error al hacer esta película.Ni siquiera se acerca a ser divertido.¡La mejor palabra para describirlo es estúpida!",
+    "sentimiento": "negativo",
+    "confianza": "96%"
+  },
+  {
+    "comentario": "Las violaciones ridículas de los regs de seguridad más básicos son solo el comienzo.Es difícil ver cómo lograron tal basura abismal en un presupuesto tan bajo.Lo apagué una vez, luego tuve curiosidad por ver si podría empeorar.Lo hizo.",
+    "sentimiento": "negativo",
+    "confianza": "97%"
+  },
+  {
+    "comentario": "La película es una canción de cuna feliz, se hizo para hacernos dormir.Y eso es lo que hacemos, mientras sueñamos con el hermoso hermoso Natasha Hensstridge.Sin guión, sin caracteres profundos, nada especial.Entonces, duermamos.",
+    "sentimiento": "positivo",
+    "confianza": "81%"
+  },
+  {
+    "comentario": "La banda sonora acompaña bien, aunque no destaca. Tiene un par de canciones conocidas y el resto es música instrumental de fondo.",
+    "sentimiento": "positivo",
+    "confianza": "82%"
+  },
+  {
+    "comentario": "Visualmente tiene cosas lindas, pero la historia es bastante predecible. Para algunos puede ser un defecto y para otros no.",
+    "sentimiento": "neutral",
+    "confianza": "62%"
+  },
+  {
+    "comentario": "\"Tulip\" está en el video \"Australian TODAS SHORTS\" de \"Tribe First Rites\" que muestra los talentos de los directores por primera vez. Deseo que más scripts tuvieran un diálogo tan excelente. Espero que Rachel Griffiths tenga más historias que contar, lo hace tan bien..",
+    "sentimiento": "positivo",
+    "confianza": "94%"
+  },
+  {
+    "comentario": "Daniel Day Lewis en mi pie izquierdo nos da una de las mejores actuaciones de un actor.Es brillante como Christy Brown, un hombre que tiene parálisis cerebral, que luego aprendió a escribir y pintar con su pie izquierdo.Un Oscar bien merecido para él y Brenda Fricker, que interpreta a su madre amorosa.Hugh O'Conner es excelente, ya que el joven Christy Brown y Ray McAnally es genial como el Padre.Vale la pena observar las actuaciones sobresalientes.",
+    "sentimiento": "positivo",
+    "confianza": "97%"
+  },
+  {
+    "comentario": "Acaba de ver el estreno de la ducha australiano [Xizhao] en el Festival de Cine de Sydney.Las notas del programa dijeron que era: una delicia perfecta, conmovedor, conmovedor, divertido, dramático y conmovedor significativo.No podría estar mas de acuerdo.Solo espero que el resto de las películas del Festival lleguen a este estándar de entretenimiento y espero ver a más películas chinas planeadas para que se muestre en Sydney en los próximos meses.",
+    "sentimiento": "positivo",
+    "confianza": "95%"
+  },
+  {
+    "comentario": "¡Vi a esta película por primera vez en HBO alrededor de 1983 y me encantó!Escurrí todos los sitios web de subastas para comprar la copia VHS.Esta es una muy buena película de suspenso con unos pocos giros que lo hacen más interesante.¡No quiero decir demasiado más porque si alguna vez tienes la oportunidad de verlo, te alegrarás de que no dije demasiado!",
+    "sentimiento": "positivo",
+    "confianza": "97%"
+  },
+  {
+    "comentario": "No me importa la extraña película artística.Pero cuando están desparramados con el simbolismo arcano y el diálogo turbio y cuando es obvio que se hicieron para el ego del cineasta en lugar del beneficio del espectador, me enojo.Todavía no soy una persona estúpida, simplemente no entendí lo que esta película estaba tratando de decir.O hacerlo.La película es una forma magnífica de comunicación humana.¿Por qué algunos cineastas lo usan en lugar de la ofuscación?",
+    "sentimiento": "negativo",
+    "confianza": "95%"
+  },
+  {
+    "comentario": "La trama sigue a una familia que se muda al campo. Durante la película aparecen conflictos con los vecinos y problemas económicos.",
+    "sentimiento": "negativo",
+    "confianza": "69%"
+  },
+  {
+    "comentario": "Es una buena comedia.Tiene las grandes características de la infancia, mintiendo o tratando de alejarse de los problemas generados.El casting es genial, excelente actuación.¿Y los efectos especiales?Bueno, algunos trucos son realmente impresionantes.¡Míralo!:)",
+    "sentimiento": "positivo",
+    "confianza": "97%"
+  },
+  {
+    "comentario": "Disfruté mucho esta película por su humor y pathos.Me gusta especialmente la forma en que los personajes dieron la bienvenida a los diversos pretendientes de Gina.Con amigos (y familiares) como estos, cualquiera se sentiría nutrido y amado.Encontré que la escritura ingeniosa y natural y los actores hicieron que el material cobrara vida.",
+    "sentimiento": "positivo",
+    "confianza": "97%"
+  },
+  {
+    "comentario": "Trabajando con una de las mejores fuentes de Shakespeare, esta película logra ser acreditable para su fuente, mientras aún atractiva a una audiencia más amplia. Elbranagh roba la película de la nariz de Bajo Bajo Fishburne, y hay un granizo con talento en buena forma.",
+    "sentimiento": "positivo",
+    "confianza": "93%"
+  },
+  {
+    "comentario": "Esta es una tonta parodia de los thrillers de los ojos privados como novelista (Michael Caín) se le llama a 'Ghostwwrite' una autobiografía de una estrella de Hollywood colorida y disminuida (Mickey Rooney).A veces la tontería se vuelve desagradable.Esto no es Cain en su mejor momento.Rooney está muy por encima.Soporte notable de Lizabeth Scott, Stander Lionel y el Comely Nadia Cassini.No es fácil de ver.",
+    "sentimiento": "negativo",
+    "confianza": "96%"
+  },
+  {
+    "comentario": "El cuento de Renoir de París, el Cancan, una lavadora-niña y el Moulin Rouge.a una versión más sometida, pero muy entretenida de la apertura de Moulin Rouge.Jean Gabin le da su excelente rendimiento habitual. La fotografía de Technicolor en la impresión que vi fue exquisita. Visualización de la tarde fácil.Chris W Galla",
+    "sentimiento": "positivo",
+    "confianza": "95%"
+  },
+  {
+    "comentario": "La segunda parte retoma la historia unos años después. Vuelven los mismos personajes y se suman dos nuevos.",
+    "sentimiento": "neutral",
+    "confianza": "53%"
+  },
+  {
+    "comentario": "Esta es una gran película oscura, oscura, offbeat, una moderna adaptación del día de la búsqueda del Mito del Santo Grial.Es un durmiente si alguna vez hubiera uno.Lo vi en Cable hace algunos años y lo grabé.Lo he prestado a muchos de mis amigos y todos les encantó.",
+    "sentimiento": "positivo",
+    "confianza": "94%"
+  },
+  {
+    "comentario": "Cada niño tiene esa película que aparece en VHS cuando no tiene nada que ver, o cuando hay una niñera alrededor.Esta fue esa película para mí.Puedo decirle todo el terreno exactamente, debo haberlo visto 100 veces al menos, y puedo decir que es una buena película para niños / familia. Todavía tengo la cinta, no lo he visto en 5 años, pero tal vezLlegaré a esto esta semana, y seré un niño para el día.Solo tienes que amar los osos del cuidado, y su Mesege.",
+    "sentimiento": "positivo",
+    "confianza": "93%"
+  },
+  {
+    "comentario": "Es una adaptación de una novela. Cambia el final respecto del libro, aunque mantiene a casi todos los personajes principales.",
+    "sentimiento": "neutral",
+    "confianza": "59%"
+  }
+]

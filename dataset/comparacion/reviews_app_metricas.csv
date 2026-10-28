@@ -1,0 +1,16 @@
+﻿resumen;valor
+textos evaluados;100
+aciertos;78
+accuracy;78,0%
+F1 macro;76,7%
+
+clase;precision;recall;F1;cantidad real
+positivo;78,0%;82,1%;80,0%;39
+negativo;78,0%;82,1%;80,0%;39
+neutral;77,8%;63,6%;70,0%;22
+
+matriz de confusión (filas = esperado, columnas = obtenido)
+;positivo;negativo;neutral
+positivo;32;6;1
+negativo;4;32;3
+neutral;5;3;14
