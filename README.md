@@ -52,7 +52,7 @@
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/analisis-sentimiento.git
+git clone https://github.com/araamaldonado/analisis_sentimiento_apiYweb.git
 cd analisis-sentimiento
 ```
 
