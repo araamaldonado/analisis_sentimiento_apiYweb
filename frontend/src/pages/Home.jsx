@@ -294,8 +294,21 @@ function Home() {
 }`}
               </pre>
               <p>
+                Un array de objetos que contenga el "id" y el "texto" de los comentarios/textos a analizar. Por ejemplo:
+              </p>
+              <pre>
+                {`[
+      { "id": 1, "texto": "Me encantó el producto" },
+      { "id": 2, "texto": "Llegó roto y nadie responde" }
+]`}
+              </pre>
+              <p>
                 <strong>.txt</strong>: un texto por línea.
               </p>
+              <pre>
+                {`Me encantó el producto
+Llegó roto y nadie responde`}
+              </pre>
               <p>
                 Máximo {MAX_ITEMS} textos y {MAX_BYTES / 1024 / 1024} MB por archivo. Los textos
                 de más de {MAX_CHARS} caracteres se dividen en partes automáticamente.
