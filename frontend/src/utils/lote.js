@@ -9,23 +9,23 @@ import {
 } from './texto.js'
 
 // Cantidad máxima de textos por petición. DEBE coincidir con
-// `max_length` de `textos` en LoteInput (backend/main.py). Es independiente del
+// `MAX_TEXTOS` de `textos` en LoteInput (backend/main.py). Es independiente del
 // máximo de textos por archivo (MAX_ITEMS en texto.js), que puede ser mayor.
-export const MAX_POR_PETICION = 64
+export const MAX_POR_PETICION = 100
 
 // Analiza los textos de un archivo:
 //  1. valida cada texto (uno inválido queda marcado con error, no tumba a los demás),
 //  2. divide los textos largos en partes de hasta MAX_CHARS,
-//  3. manda las partes al servidor en tandas de hasta MAX_ITEMS (el límite del backend),
+//  3. manda las partes al servidor en tandas de hasta MAX_POR_PETICION (el límite del backend por petición),
 //  4. junta las partes de cada texto en un resultado general.
 //
 // items:           [{ id, texto }]
-// analizarPartes:  async (arrayDeStrings) => [{ etiqueta, confianza, error? }, ...]
-// opciones:        { alProgresar(actual, total), estaCancelado() }
+// analizarPartes:  async (arrayDeStrings, signal) => [{ etiqueta, confianza, error? }, ...]
+// opciones:        { alProgresar(actual, total), estaCancelado(), signal }
 //
 // Devuelve [{ id, texto, etiqueta, confianza, partes: [...] }] o, si ese texto falló,
 // [{ id, texto, error: 'mensaje claro' }].
-export async function analizarLote(items, analizarPartes, { alProgresar, estaCancelado } = {}) {
+export async function analizarLote(items, analizarPartes, { alProgresar, estaCancelado, signal } = {}) {
   const resultados = items.map((item) => ({ ...item }))
   const trabajos = [] // una entrada por parte: { indice, texto }
 
@@ -53,7 +53,7 @@ export async function analizarLote(items, analizarPartes, { alProgresar, estaCan
     if (estaCancelado?.()) throw new ErrorCancelado()
 
     const tanda = trabajos.slice(desde, desde + MAX_POR_PETICION)
-    const respuestas = await analizarPartes(tanda.map((t) => t.texto))
+    const respuestas = await analizarPartes(tanda.map((t) => t.texto), signal)
 
     if (estaCancelado?.()) throw new ErrorCancelado()
 
@@ -114,7 +114,7 @@ export function mensajeErrorServidor(err) {
     return `El servidor rechazó los datos enviados${motivo ? `: ${motivo}` : ''}.`
   }
   if (estado === 429) {
-    return 'Demasiadas peticiones seguidas al servidor (el límite es de 5 por minuto). Espere un minuto e intente nuevamente.'
+    return 'Demasiadas peticiones seguidas al servidor (el límite es de 30 por minuto). Espere un minuto e intente nuevamente.'
   }
   if (estado >= 500) {
     return `Error interno del servidor (${estado}). Revise la consola del backend.`

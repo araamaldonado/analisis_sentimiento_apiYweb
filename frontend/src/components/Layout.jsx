@@ -64,7 +64,7 @@ function Layout() {
       </main>
 
       <footer className="site-footer">
-        <p>Copyright @2026 Araceli Maldonado. Todos los derechos reservados.</p>
+        <p>Copyright ©2026 Araceli Maldonado. Todos los derechos reservados.</p>
       </footer>
     </>
   )

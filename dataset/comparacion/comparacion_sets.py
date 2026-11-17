@@ -4,11 +4,11 @@ Compara el resultado esperado (dataset etiquetado) con el resultado real de la a
 
 Uso (desde la carpeta donde estén los archivos):
     python comparacion_sets.py mis_reviews_resultados.json
-    python comparacion_sets.py mis_reviews_resultados.json --esperado reviews_test.json
+    python comparacion_sets.py mis_reviews_resultados.json --esperado ../imdb_reviews_test.json
     python comparacion_sets.py mis_reviews_resultados.json -o comparacion.csv --sep ","
 
 Entradas
-    --esperado   JSON con los textos y su etiqueta correcta (por defecto reviews_test.json):
+    --esperado   JSON con los textos y su etiqueta correcta (por defecto ../imdb_reviews_test.json):
                  [{"review_es": "...", "sentimiento": "positivo"}, ...]
     resultados   JSON descargado desde la app:
                  [{"comentario": "...", "sentimiento": "neutral", "confianza": "96%"}, ...]
@@ -265,8 +265,8 @@ def mostrar_consola(filas, m, sobrantes, fmt, largo):
 def main():
     ap = argparse.ArgumentParser(description="Compara el resultado esperado con el resultado real de la app.")
     ap.add_argument("resultados", help="JSON descargado de la app (por ejemplo mi_archivo_resultados.json)")
-    ap.add_argument("--esperado", default="reviews_test.json",
-                    help="JSON con los textos y etiquetas correctas (por defecto: reviews_test.json)")
+    ap.add_argument("--esperado", default="../imdb_reviews_test.json",
+                    help="JSON con los textos y etiquetas correctas (por defecto: ../imdb_reviews_test.json)")
     ap.add_argument("-o", "--salida", help="nombre del CSV de comparación (por defecto: <resultados>_comparacion.csv)")
     ap.add_argument("--sep", default=";", choices=[",", ";"],
                     help="separador de columnas del CSV: ';' abre bien en Excel en español (por defecto), ',' para el estándar")

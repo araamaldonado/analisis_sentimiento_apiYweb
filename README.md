@@ -26,7 +26,8 @@
   * **Normal:** escribes o pegas un texto y obtienes su sentimiento.
   * **Extendido:** subes un archivo `.json` o `.txt` con varios textos (por ejemplo, comentarios de un foro) y obtienes un resumen por sentimiento y el detalle de cada texto.
 * ✂️ **Textos largos:** los textos de más de 465 caracteres se dividen en partes, se analiza cada una y se muestra un resultado general. Funciona tanto en el modo normal como en el extendido.
-* 📦 **Envío por tandas:** en el modo extendido, las partes se envían a la API en grupos de hasta 64, de modo que un archivo grande no supera el límite de la API.
+* 📦 **Envío por tandas:** en el modo extendido, las partes se envían a la API en grupos de hasta 100, de modo que un archivo grande no supera el límite de la API.
+* 🛑 **Cancelar:** se puede detener un análisis en curso; el servidor también deja de procesar el resto del lote.
 * ⬇️ **Descarga de resultados:** en ambos modos puedes descargar el análisis en un archivo `.json` (ver [Descargar resultados](#descargar-resultados)).
 * 🛡️ **Validación de entradas:** se rechazan los textos sin palabras (solo símbolos o números), tanto en el frontend como en la API. En el modo extendido, un texto inválido se marca con su error y no detiene el análisis de los demás.
 * 💬 **Mensajes de error claros:** la aplicación avisa si el servidor no responde o está apagado, si tardó demasiado, si se superó el límite de peticiones o si rechazó los datos enviados.
@@ -53,7 +54,7 @@
 
 ```bash
 git clone https://github.com/araamaldonado/analisis_sentimiento_apiYweb.git
-cd analisis-sentimiento
+cd analisis_sentimiento_apiYweb
 ```
 
 ### 2. Configurar el backend
@@ -127,11 +128,11 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
-La API queda disponible en `http://localhost:8000`, y su documentación interactiva en `http://localhost:8000/docs`. En la primera ejecución se descarga el modelo, por lo que el arranque puede tardar.
+La API queda disponible en `http://localhost:8000`, y su documentación interactiva en `http://localhost:8000/docs`. El servidor arranca enseguida. El modelo se carga (y se descarga, la primera vez) en la primera petición de análisis, así que ese primer análisis puede tardar unos segundos; los siguientes son rápidos.
 
 ### 3. Configurar el frontend
 
-En otra terminal, desde la raíz del proyecto:
+En otra terminal, desde la raíz del proyecto (con el backend ya iniciado):
 
 ```bash
 cd frontend
@@ -141,7 +142,20 @@ npm run dev
 
 Abre `http://localhost:5173` en tu navegador.
 
-> El frontend se comunica con la API en `http://localhost:8000` (configurado en `frontend/services/sentiment.service.js`), y la API acepta peticiones desde `http://localhost:5173`. Si cambias algún puerto, actualiza ambos lugares.
+> En desarrollo, Vite redirige las peticiones `/api` al backend (configurado en `frontend/vite.config.js`), por lo que el frontend no tiene la dirección de la API escrita en el código. Si cambias el puerto del backend, actualiza solo ese archivo.
+
+#### Ejecutar todo desde un solo puerto (sin `npm run dev`)
+
+Desde la raíz del proyecto, con `npm install` ya hecho:
+
+```bash
+cd frontend
+npm run build
+cd ../backend
+uvicorn main:app
+```
+
+Abre `http://localhost:8000`: FastAPI sirve la API y la interfaz ya compilada.
 
 ## 🧭 Uso
 
@@ -195,7 +209,7 @@ Después de un análisis aparece el botón **Descargar resultados (.json)**, tan
 | Partes por texto | 20 |
 | Textos por archivo | 100 |
 | Tamaño del archivo | 1 MB |
-| Textos por petición a la API | 64 (el frontend envía los archivos grandes por tandas) |
+| Textos por petición a la API | 100 (el frontend envía los archivos grandes por tandas) |
 | Peticiones por minuto | Limitadas por IP en `backend/main.py` (por defecto, 30 por minuto) |
 
 ## 🔌 API
@@ -217,9 +231,20 @@ Respuesta (en el mismo orden que la entrada; los textos sin palabras analizables
 }
 ```
 
-La API acepta hasta 64 textos por petición, de hasta 500 caracteres cada uno. Si se supera alguno de esos límites responde `422`, y si se superan las peticiones por minuto, `429`.
+La API acepta hasta 100 textos por petición, de hasta 500 caracteres cada uno. Si se supera alguno de esos límites responde `422`, y si se superan las peticiones por minuto, `429`.
 
-> Si cambias el máximo de textos por petición en `backend/main.py` (`max_length` de `textos`), actualiza también `MAX_POR_PETICION` en `frontend/src/utils/lote.js`: deben coincidir.
+> Si cambias el máximo de textos por petición en `backend/main.py` (`MAX_TEXTOS` de `textos`), actualiza también `MAX_POR_PETICION` en `frontend/src/utils/lote.js`: deben coincidir.
+
+## 🧪 Tests
+
+Desde `backend/`, con el entorno virtual activado:
+
+*Requieren haber instalado PyTorch como en la sección anterior*
+```bash
+pip install -r requirements-dev.txt
+pytest -m "not modelo"   # rápidos, sin cargar el modelo real
+pytest -m modelo         # prueban frases con el modelo real (tardan unos segundos)
+```
 
 ## 📊 Evaluación del modelo
 
@@ -234,7 +259,7 @@ Son **100 comentarios** con su etiqueta esperada:
 
 Archivos:
 
-* `reviews_test.json`: los 100 comentarios con su etiqueta esperada (`review_es`, `sentimiento`).
+* `imdb_reviews_test.json`: los 100 comentarios con su etiqueta esperada (`review_es`, `sentimiento`).
 * `reviews_app.json`: los mismos textos en el formato que acepta la aplicación (`{"textos": [...]}`).
 
 Para volver a descargar el conjunto de Kaggle y regenerar la muestra hace falta instalar `kagglehub` (`pip install kagglehub`). No es necesario para usar la aplicación.
@@ -242,12 +267,12 @@ Para volver a descargar el conjunto de Kaggle y regenerar la muestra hace falta 
 ### Cómo repetir la evaluación
 
 1. Inicia el backend y el frontend (ver [Instalación](#-instalación-y-configuración-local)).
-2. En la aplicación, entra a **Análisis extendido** y sube `reviews_app.json`.
+2. En la aplicación, entra a **Análisis extendido** y sube `dataset/comparacion/reviews_app.json`.
 3. Presiona **Descargar resultados (.json)**. Obtendrás `reviews_app_resultados.json`.
-4. Desde la carpeta `dataset/`, con el entorno virtual activado, ejecuta:
+4. Desde la carpeta dataset/comparacion/, con el entorno virtual activado, ejecuta:
 
    ```bash
-   python comparar_resultados.py reviews_app_resultados.json --esperado reviews_test.json
+   python comparacion_sets.py reviews_app_resultados.json --esperado ../imdb_reviews_test.json
    ```
 
 El script solo usa la librería estándar de Python. Empareja los textos por contenido (el orden de los archivos no importa), muestra la comparación por consola y genera dos archivos CSV:
@@ -297,26 +322,51 @@ La clase neutral es la que más se confunde: 8 de los 22 comentarios neutrales s
 ```
 analisis-sentimiento/
 ├── backend/
-│   ├── main.py            # API (FastAPI)
-│   ├── inference.py       # carga del modelo y análisis por lotes
-│   └── requirements.txt
+│   ├── tests/
+│   │   ├── conftest.py            # fixtures compartidos (modelo falso, etc.)
+│   │   ├── test_api.py            # tests de la API con TestClient
+│   │   └── test_inference.py      # tests de la carga perezosa y del análisis por lotes
+│   ├── inference.py               # carga perezosa del modelo y análisis por lotes
+│   ├── main.py                    # API (FastAPI)
+│   ├── pytest.ini                 # configuración de pytest
+│   ├── requirements.txt           # dependencias (PyTorch se instala aparte)
+│   └── requirements-dev.txt       # dependencias para correr los tests
+├── dataset/
+│   ├── comparacion/
+│   │   ├── comparacion_sets.py            # compara resultado esperado vs obtenido
+│   │   ├── reviews_app.json               # los textos en el formato de la aplicación
+│   │   ├── reviews_app_resultados.json    # resultados descargados de la aplicación
+│   │   ├── reviews_app_comparacion.csv    # comparación por comentario
+│   │   └── reviews_app_metricas.csv       # accuracy, precisión, recall y F1
+│   ├── dataset.py                 # descarga el dataset de IMDB y lo mezcla con reseñas neutras
+│   ├── fake_reviews_neu.json      # reseñas neutras inventadas
+│   └── imdb_reviews_test.json     # los 100 comentarios con su etiqueta esperada
 ├── frontend/
 │   ├── services/
 │   │   └── sentiment.service.js   # llamadas a la API (Axios)
-│   └── src/
-│       ├── pages/
-│       │   └── Home.jsx           # pantalla principal (modo normal y extendido)
-│       ├── components/
-│       │   └── Resultados.jsx     # resultados, animación de carga y botón de descarga
-│       └── utils/
-│           ├── texto.js           # límites, validación, división de textos largos y lectura de archivos
-│           ├── lote.js            # análisis de archivos: partes, tandas y errores del servidor
-│           └── descarga.js        # descarga de resultados en JSON
-└── dataset/
-    ├── comparacion/
-    │   ├── comparacion_sets.py    # compara resultado esperado vs obtenido (CSV y consola)
-    │   └── reviews_app.json       # los mismos textos en el formato de la aplicación
-    └── dataset.py                 # descarga el data set de imdb en español y mezcla con reviews custom neutras
+│   ├── src/
+│   │   ├── assets/
+│   │   │   ├── analisa_logo.png   # logo
+│   │   │   └── carga_1.svg ... carga_3.svg   # iconos de la animación de carga
+│   │   ├── components/
+│   │   │   ├── Layout.jsx         # estructura común: logo, menú, modo nocturno y pie
+│   │   │   └── Resultados.jsx     # resultados, animación de carga y botón de descarga
+│   │   ├── pages/
+│   │   │   ├── Home.jsx           # pantalla principal (modo normal y extendido)
+│   │   │   ├── Info.jsx           # cómo funciona el análisis
+│   │   │   └── NoEncontrada.jsx   # página para rutas inexistentes
+│   │   ├── utils/
+│   │   │   ├── texto.js           # límites, validación, división y lectura de archivos
+│   │   │   ├── lote.js            # partes, tandas y errores del servidor
+│   │   │   └── descarga.js        # descarga de resultados en JSON
+│   │   ├── App.jsx                # rutas
+│   │   ├── App.css                # estilos y modo nocturno
+│   │   └── main.jsx
+│   ├── index.html
+│   ├── package.json
+│   └── vite.config.js             # servidor de desarrollo y proxy hacia la API
+├── imgs/                          # capturas usadas en este README
+└── README.md
 ```
 
 ## 🙏 Créditos

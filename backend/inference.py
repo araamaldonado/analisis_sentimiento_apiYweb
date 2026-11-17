@@ -1,11 +1,23 @@
-from transformers import pipeline
-import torch
+import threading
 
-clasificador = pipeline(
-    "sentiment-analysis",
-    model="pysentimiento/robertuito-sentiment-analysis",
-    device=0 if torch.cuda.is_available() else -1,  # 0 = primera GPU, -1 = CPU
-)
+_clasificador = None
+_candado = threading.Lock()
+
+
+def obtener_clasificador():
+    global _clasificador
+    if _clasificador is None:
+        with _candado:
+            if _clasificador is None:
+                import torch
+                from transformers import pipeline
+
+                _clasificador = pipeline(
+                    "sentiment-analysis",
+                    model="pysentimiento/robertuito-sentiment-analysis",
+                    device=0 if torch.cuda.is_available() else -1,
+                )
+    return _clasificador
 
 MAPEO_ETIQUETAS = {
     "POS": "Positivo",
@@ -27,7 +39,7 @@ def analizar_sentimientos_lote(textos: list[str]) -> list[dict]:
     validos = [(i, t) for i, t in enumerate(textos) if tiene_sentido(t)]
 
     if validos:
-        resultados = clasificador(
+        resultados = obtener_clasificador()(
             [t for _, t in validos],
             batch_size=16,
             truncation=True,

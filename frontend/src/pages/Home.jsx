@@ -29,22 +29,27 @@ function Home() {
   const [cargando, setCargando] = useState(null) // null | 'texto' | 'lote'
   const [progreso, setProgreso] = useState('')
   const cancelar = useRef(false)
+  const controlador = useRef(null)
+  const temporizador = useRef(null)
 
   // Si se sale de la página (por ejemplo a Info) en medio de un análisis, se detiene
   useEffect(() => {
     return () => {
+      clearTimeout(temporizador.current)
       cancelar.current = true
+      controlador.current?.abort()
     }
   }, [])
 
   const handleCancelar = () => {
     cancelar.current = true;
+    controlador.current?.abort()
     setCargando(null);
     setProgreso('');
     setError('Análisis cancelado.');
     setErrorLote('Análisis cancelado.');
 
-    setTimeout(() => {
+    temporizador.current = setTimeout(() => {
       setError("")
       setErrorLote("")
       setResultado(null)
@@ -57,7 +62,7 @@ function Home() {
   const largoParteActual = partes.length ? partes[partes.length - 1].length : 0
 
   
-  const analizarTexto = async (texto) => {
+  const analizarTexto = async (texto, signal) => {
   const partesTexto = dividirTexto(texto)
 
   if (partesTexto.length === 0) {
@@ -68,11 +73,11 @@ function Home() {
       `El texto es demasiado largo (máximo ${MAX_PARTES} partes de ${MAX_CHARS} caracteres).`,
     )
   }
-  const mensaje = validarTexto(texto) // la función que te pasé antes
+  const mensaje = validarTexto(texto)
   if (mensaje) throw new ErrorValidacion(mensaje)
   if (cancelar.current) throw new ErrorCancelado()
 
-  const respuestas = await apisentiment_batch_fetch(partesTexto)
+  const respuestas = await apisentiment_batch_fetch(partesTexto, signal)
 
   if (cancelar.current) throw new ErrorCancelado()
 
@@ -88,19 +93,20 @@ function Home() {
     e.preventDefault()
     if (cargando) return
 
+    clearTimeout(temporizador.current)
     cancelar.current = false
+    controlador.current = new AbortController()
+    const { signal } = controlador.current
     setError('')
     setResultado(null)
     setProgreso('')
     setCargando('texto')
 
     try {
-      const r = await analizarTexto(text, (actual, total) =>
-        setProgreso(total > 1 ? `Analizando parte ${actual}/${total}` : ''),
-      )
+      const r = await analizarTexto(text, signal)
       setResultado({ ...r, texto: text }) // se guarda el texto analizado para poder descargarlo
     } catch (err) {
-      if (err instanceof ErrorCancelado) {
+      if (err instanceof ErrorCancelado || err.code === 'ERR_CANCELED') {
         setError('Análisis cancelado.')
       } else if (err instanceof ErrorValidacion) {
         setError(err.message)
@@ -121,7 +127,10 @@ function Home() {
     e.target.value = ''
     if (!archivo) return
 
+    clearTimeout(temporizador.current)
     cancelar.current = false
+    controlador.current = new AbortController()
+    const { signal } = controlador.current
     setErrorLote('')
     setLote(null)
     setProgreso('')
@@ -142,9 +151,10 @@ function Home() {
       setProgreso(`Analizando ${items.length} textos...`)
 
       // Valida cada texto, divide los largos en partes, manda las partes en tandas
-      // (el backend acepta hasta MAX_ITEMS por petición) y junta el resultado de cada texto
+      // (el backend acepta hasta MAX_POR_PETICION por petición) y junta el resultado de cada texto
       const analizados = await analizarLote(items, apisentiment_batch_fetch, {
         estaCancelado: () => cancelar.current,
+        signal,
         alProgresar: (actual, total) =>
           setProgreso(`Analizando parte ${actual}/${total} de ${items.length} textos...`),
       })
@@ -152,7 +162,7 @@ function Home() {
       setLote({ archivo: archivo.name, items: analizados })
 
     } catch (err) {
-      if (err instanceof ErrorCancelado) {
+      if (err instanceof ErrorCancelado || err.code === 'ERR_CANCELED') {
         setErrorLote('Análisis cancelado.')
       } else if (err instanceof ErrorValidacion) {
         setErrorLote(err.message)

@@ -82,7 +82,6 @@ export function ResultadoLote({ cargando, progreso, error, lote, onDescargar }) 
     contenido = (
       <>
         <p className="veredicto">
-          {lote.parcial ? 'Resultado parcial. ' : ''}
           Archivo “{lote.archivo}”: {correctos.length} de {lote.items.length} textos analizados
           {fallidos > 0 ? ` (${fallidos} con error)` : ''}.
         </p>
