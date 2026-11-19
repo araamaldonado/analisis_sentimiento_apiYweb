@@ -367,6 +367,7 @@ analisis-sentimiento/
 │   │   ├── utils/
 │   │   │   ├── texto.js           # límites, validación, división y lectura de archivos
 │   │   │   ├── lote.js            # partes, tandas y errores del servidor
+│   │   │   ├── lote.test.js       # test de frontend sobre analisis de textos/lotes y conexion con backend
 │   │   │   └── descarga.js        # descarga de resultados en JSON
 │   │   ├── App.jsx                # rutas
 │   │   ├── App.css                # estilos y modo nocturno
