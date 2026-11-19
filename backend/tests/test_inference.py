@@ -42,7 +42,7 @@ def test_textos_sin_palabras_no_cargan_el_modelo(monkeypatch):
 
     monkeypatch.setattr(inference, "obtener_clasificador", no_deberia_cargarse)
 
-    resultados = inference.analizar_sentimientos_lote([",.,.,.", "", "   ", "12345"])
+    resultados = inference.analizar_sentimientos_lote([",.,.,.", "", "   ", "12345", "a a a", "x-y-z", "a1b2c3", "ok"])
 
     assert all("error" in r and "etiqueta" not in r for r in resultados)
 

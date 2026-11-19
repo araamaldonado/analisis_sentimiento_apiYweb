@@ -1,4 +1,5 @@
 import threading
+from itertools import groupby
 
 _clasificador = None
 _candado = threading.Lock()
@@ -28,7 +29,8 @@ MAPEO_ETIQUETAS = {
 def tiene_sentido(t: str) -> bool:
     sin_esp = "".join(t.split())
     letras = sum(c.isalpha() for c in sin_esp)
-    return letras >= 3 and letras / len(sin_esp) >= 0.5
+    tiene_palabra = any(es_letra and len(list(g)) >= 2 for es_letra, g in groupby(t, str.isalpha))
+    return letras >= 3 and letras / len(sin_esp) >= 0.5 and tiene_palabra
 
 def analizar_sentimientos_lote(textos: list[str]) -> list[dict]:
     # Respuesta por default, que si el texto es válido se modifica

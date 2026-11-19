@@ -233,17 +233,26 @@ Respuesta (en el mismo orden que la entrada; los textos sin palabras analizables
 
 La API acepta hasta 100 textos por petición, de hasta 500 caracteres cada uno. Si se supera alguno de esos límites responde `422`, y si se superan las peticiones por minuto, `429`.
 
-> Si cambias el máximo de textos por petición en `backend/main.py` (`MAX_TEXTOS` de `textos`), actualiza también `MAX_POR_PETICION` en `frontend/src/utils/lote.js`: deben coincidir.
+> Si cambias `MAX_TEXTOS` en `backend/main.py`, actualiza también `MAX_POR_PETICION` en `frontend/src/utils/lote.js`: deben coincidir.
 
 ## 🧪 Tests
 
+**Backend (pytest)**
 Desde `backend/`, con el entorno virtual activado:
 
 *Requieren haber instalado PyTorch como en la sección anterior*
+
 ```bash
 pip install -r requirements-dev.txt
 pytest -m "not modelo"   # rápidos, sin cargar el modelo real
 pytest -m modelo         # prueban frases con el modelo real (tardan unos segundos)
+```
+
+**Frontend (Vitest):**
+Desde `frontend/`, (con las dependencias ya instaladas con `npm install`):
+
+```bash
+npm test
 ```
 
 ## 📊 Evaluación del modelo

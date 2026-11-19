@@ -5,10 +5,13 @@ from pathlib import Path
 import kagglehub
 
 # ---- Configuración ----
-TOTAL = 78            # cantidad total de comentarios
+TOTAL = 78            # cantidad total de comentarios ANTES de sumar los neutros.
 LARGO_MAX = 465        # límite del modelo; poné None para no filtrar por largo
 SEMILLA = 30           # misma semilla = mismo resultado siempre
-archivo_json = "reviews_test.json"
+archivo_json = "imdb_reviews_test.json" 
+# aclaración sobre el archivo: es un JSON con una lista de diccionarios, cada uno con dos claves: "review_es" y "sentimiento"
+# fake_reviews_neu.json es otro archivo JSON con 22 comentarios neutros, que se agregan al final para tener un total de 100 comentarios,
+# si usted gusta, puede generar sus propios comentarios neutros y agregarlos a ese archivo
 
 # ---- Descarga y lectura ----
 path = kagglehub.dataset_download("luisdiegofv97/imdb-dataset-of-50k-movie-reviews-spanish")
@@ -52,18 +55,19 @@ for i, c in enumerate(comentarios_prueba, start=1):
     print()
 
 
+# ---- Agregar comentarios neutros ----
 
-with open("reviews_test.json", encoding="utf-8") as f:
+with open(archivo_json, encoding="utf-8") as f:
     reviews = json.load(f)          # las 78 que ya tenés
 
-with open("reviews_neu.json", encoding="utf-8") as f:
+with open("fake_reviews_neu.json", encoding="utf-8") as f:
     neutras = json.load(f)          # las 22 de arriba
 
 reviews += neutras
 random.seed(30)
 random.shuffle(reviews)
 
-with open("reviews_test.json", "w", encoding="utf-8") as f:
+with open(archivo_json, "w", encoding="utf-8") as f:
     json.dump(reviews, f, ensure_ascii=False, indent=2)
 
 print(len(reviews))  # 100

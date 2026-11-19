@@ -1,7 +1,7 @@
 // Descarga de resultados en formato JSON:
-// [{ "comentario": "...", "sentimiento": "neutral", "confianza": "96%" }, ...]
+// [{ "comentario": "...", "sentimiento": "neutral", "confianza": "96.0%" }, ...]
 
-const porcentajeEntero = (confianza) => `${Math.round(confianza * 100)}%`
+const porcentaje = (confianza) => `${(confianza * 100).toFixed(1)}%`
 
 // items: [{ texto, etiqueta, confianza, error? }]
 // Un texto que no se pudo analizar se guarda con su motivo en lugar de sentimiento/confianza,
@@ -13,7 +13,7 @@ export function armarFilas(items) {
       : {
           comentario: item.texto,
           sentimiento: item.etiqueta.toLowerCase(),
-          confianza: porcentajeEntero(item.confianza),
+          confianza: porcentaje(item.confianza),
         },
   )
 }

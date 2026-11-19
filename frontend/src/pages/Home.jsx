@@ -42,20 +42,21 @@ function Home() {
   }, [])
 
   const handleCancelar = () => {
-    cancelar.current = true;
+    const modo = cargando
+    cancelar.current = true
     controlador.current?.abort()
-    setCargando(null);
-    setProgreso('');
-    setError('Análisis cancelado.');
-    setErrorLote('Análisis cancelado.');
+    setCargando(null)
+    setProgreso('')
+    clearTimeout(temporizador.current)
 
-    temporizador.current = setTimeout(() => {
-      setError("")
-      setErrorLote("")
-      setResultado(null)
-      setLote(null)
-      }, 3500)
-  };
+    if (modo === 'texto') {
+      setError('Análisis cancelado.')
+      temporizador.current = setTimeout(() => { setError(''); setResultado(null) }, 3500)
+    } else {
+      setErrorLote('Análisis cancelado.')
+      temporizador.current = setTimeout(() => { setErrorLote(''); setLote(null) }, 3500)
+    }
+  }
 
   // Partes en las que se dividiría el texto actual (cada una de hasta MAX_CHARS)
   const partes = useMemo(() => dividirTexto(text), [text])
@@ -144,9 +145,6 @@ function Home() {
       }
 
       const items = leerArchivo(archivo.name, await archivo.text())
-      if (items.length > MAX_ITEMS) {
-        throw new ErrorValidacion(`El archivo tiene ${items.length} textos y el máximo es ${MAX_ITEMS}.`)
-      }
 
       setProgreso(`Analizando ${items.length} textos...`)
 
@@ -156,7 +154,7 @@ function Home() {
         estaCancelado: () => cancelar.current,
         signal,
         alProgresar: (actual, total) =>
-          setProgreso(`Analizando parte ${actual}/${total} de ${items.length} textos...`),
+          setProgreso(`Analizando ${items.length} textos... ${Math.round((actual / total) * 100)}%`),
       })
 
       setLote({ archivo: archivo.name, items: analizados })
@@ -219,8 +217,9 @@ function Home() {
                 id="contador-texto"
                 className={`contador${largoParteActual >= UMBRAL_ALERTA ? ' contador--alerta' : ''}`}
               >
-                {largoParteActual}/{MAX_CHARS} caracteres
-                {partes.length > 1 && ` (parte ${partes.length}/${partes.length})`}
+                      {partes.length > 1
+                      ? `${text.length} caracteres · ${partes.length} partes`
+                      : `${largoParteActual}/${MAX_CHARS} caracteres`}
               </span>
             </div>
 
